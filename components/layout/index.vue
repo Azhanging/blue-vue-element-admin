@@ -1,12 +1,12 @@
 <template>
   <div :class="classObj" class="app-wrapper">
 
-    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
+    <div v-if="device==='mobile' && sidebar.opened && !onlyMain" class="drawer-bg" @click="handleClickOutside"/>
 
-    <sidebar class="sidebar-container"/>
+    <sidebar class="sidebar-container" v-if="!onlyMain"/>
 
-    <div :class="{hasTagsView:needTagsView}" class="main-container">
-      <div :class="{'fixed-header':fixedHeader}">
+    <div :class="{hasTagsView:needTagsView,'only-main':onlyMain}" class="main-container">
+      <div :class="{'fixed-header':fixedHeader}" v-if="!onlyMain">
         <navbar/>
         <tags-view v-if="needTagsView"/>
       </div>
@@ -18,7 +18,7 @@
 
     <!-- you can add element-ui's tooltip -->
     <el-tooltip placement="top" content="tooltip">
-      <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="0" transition-name="fade" />
+      <back-to-top :custom-style="myBackToTopStyle" :visibility-height="300" :back-position="0" transition-name="fade"/>
     </el-tooltip>
 
   </div>
@@ -34,7 +34,7 @@
 
   export default {
     name: 'Layout',
-    data(){
+    data() {
       return {
         myBackToTopStyle: {
           right: '10px',
@@ -64,6 +64,7 @@
         showSettings: state => state.settings.showSettings,
         needTagsView: state => state.settings.tagsView,
         fixedHeader: state => state.settings.fixedHeader,
+        onlyMain: state => state.settings.onlyMain,
         loading: state => state.view.loading
       }),
       classObj() {
@@ -84,6 +85,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+  .only-main {
+    margin-left: 0 !important;
+  }
 
   .app-wrapper {
     @include clearfix;

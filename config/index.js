@@ -6,6 +6,8 @@ const config = {
     fixedHeader: true,
     sidebarLogo: true,
     errorLog: 'production',
+    //是否显示菜单
+    onlyMain: false,
     //是否显示demo的内容
     hasDemo: true
   },

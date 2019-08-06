@@ -1,7 +1,7 @@
 import axios from 'axios'
 import config from '@config';
 import utils from 'blue-utils';
-import router, { routerID } from '@router';
+import router, { routerMeta } from '@router';
 import { MessageBox, Message } from 'element-ui'
 import code from '$code/code';    //错误码
 import { codeHandler } from '$code';   //错误码处理
@@ -16,7 +16,7 @@ const $axios = axios.create({
 // request interceptor
 $axios.interceptors.request.use((axiosConfig) => {
   //把路由当前路由的id设置给axios config中
-  axiosConfig.routerID = routerID.getCurrentRouterID();
+  axiosConfig.routeID = routerMeta.getCurrentRouterID();
   const isLoading = axiosConfig.isLoading;
   setHeaderToken(axiosConfig);
   //是否loading显示
@@ -73,7 +73,7 @@ $axios.interceptors.response.use((res) => {
 
   //检查当前的路由标识和当前路由中的id标识是否一样
   //不一样不去执行后面异步的操作
-  if (!routerID.isCurrentRouteID(axiosConfig.routerID)) {
+  if (!routerMeta.isCurrentRouteID(axiosConfig.routeID)) {
     return Promise.reject(error);
   }
 

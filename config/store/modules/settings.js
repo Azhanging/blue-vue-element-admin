@@ -5,15 +5,17 @@ const {
   showSettings,
   tagsView,
   fixedHeader,
-  sidebarLogo
+  sidebarLogo,
+  onlyMain
 } = config.view;
 
 const state = {
   theme: variables.theme,
-  showSettings: showSettings,
-  tagsView: tagsView,
-  fixedHeader: fixedHeader,
-  sidebarLogo: sidebarLogo
+  showSettings,
+  tagsView,
+  fixedHeader,
+  sidebarLogo,
+  onlyMain
 };
 
 const mutations = {
