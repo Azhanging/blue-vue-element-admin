@@ -32,9 +32,7 @@ export function loginSuccessRouterTo(path) {
 
 //登录超时
 export function loginExpire() {
-  if (config.login.mode === 'token') {
-    clearLoginStorage();
-  }
+  clearLoginStorage();
   routerToLogin();
 }
 
@@ -57,7 +55,7 @@ export function getToken() {
   const token = {};
   utils.each(config.login.storage, (key) => {
     const getItem = localStorage.getItem(key);
-    if(getItem){
+    if (getItem) {
       token[key] = getItem;
     }
   });

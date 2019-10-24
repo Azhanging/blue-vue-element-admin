@@ -12,6 +12,7 @@ import Element from 'element-ui';
 import $axios from '$axios';
 import config from '@config';
 import * as filters from '@/filters';
+import { genRules } from './validate';
 
 //自定义指令
 import { useDirectiveInVue } from './directive';
@@ -40,11 +41,13 @@ export function useInVue(opts = {}) {
   Vue.prototype.$axios = $axios;
 
   Vue.mixin({
-    data(){
+    data() {
       return {
         config
       }
     }
   });
+
+  Vue.prototype.$genRules = genRules;
 
 }

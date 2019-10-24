@@ -4,10 +4,10 @@ import { setLoginStorage, clearLoginStorage } from '$assets/js/login';
 import { getUserInfo } from '$assets/js/user';
 import { Message } from 'element-ui';
 
-//登录
+//login in
 export function apiLoginIn(data) {
   return $axios({
-    url: '/mock/login/in',
+    url: '/login/in',
     method: 'post',
     data
   }).then((res) => {
@@ -25,10 +25,10 @@ export function apiLoginIn(data) {
   });
 }
 
-//登出
+//login out
 export function apiLoginOut() {
   return $axios({
-    url: '/mock/login/out',
+    url: '/login/out',
     type: 'get'
   }).then(() => {
     clearLoginStorage();
@@ -38,4 +38,9 @@ export function apiLoginOut() {
     });
     router.push(`/login?redirect=${router.currentRoute.fullPath}`);
   });
+}
+
+//register
+export function apiRegister(data) {
+  return $axios.post(`/register`, data);
 }

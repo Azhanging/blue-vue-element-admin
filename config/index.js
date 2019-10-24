@@ -15,7 +15,6 @@ const config = {
     login: ``
   },
   login: {
-    mode: 'token',
     storage: {
       ['token']: `token`
     }

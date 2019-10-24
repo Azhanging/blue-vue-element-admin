@@ -10,20 +10,12 @@ const devServer = {
   port,
   //根据环境配置相关代理
   open: false,
-  before(app) {
-    //mock-server
-    /*mockServer({
-      app,
-      apiFilePath: resolve('./mock/api'),     //api路径，用于更新path使用
-      mockDir: resolve('./mock')          //mock路径，用于更新path使用
-    });*/
-  },
   proxy: {
     '/mock': {
       target: `http:localhost:${port}/mock`,
     },
     '/api': {
-      target: `https://location:3000`
+      target: `http://localhost:3000`
     }
   }
 };

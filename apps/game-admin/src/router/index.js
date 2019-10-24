@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import routes from "./routes";
+import routes from "./routes/index";
 
 import RouterMeta from '$use-in-vue-router/router-meta';
 
@@ -16,6 +16,8 @@ const createRouter = () => new Router({
 });
 
 const router = createRouter();
+
+
 
 export function resetRouter() {
   const newRouter = createRouter();

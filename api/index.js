@@ -1,2 +1,2 @@
-export * from './login';
+export * from './manager';
 export * from './user';
