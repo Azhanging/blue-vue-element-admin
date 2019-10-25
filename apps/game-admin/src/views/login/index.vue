@@ -82,7 +82,7 @@
           password: '123456',
           email: 'azhanging@qq.com',
           code: 'code',
-          type: 'manager'
+          type: 'admin'
         },
         passwordType: 'password',
         capsTooltip: false,

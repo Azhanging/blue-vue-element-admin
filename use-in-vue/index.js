@@ -40,6 +40,7 @@ export function useInVue(opts = {}) {
   //axios
   Vue.prototype.$axios = $axios;
 
+  //配置mixin config
   Vue.mixin({
     data() {
       return {
@@ -48,6 +49,7 @@ export function useInVue(opts = {}) {
     }
   });
 
+  //校验
   Vue.prototype.$genRules = genRules;
 
 }

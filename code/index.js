@@ -4,25 +4,30 @@ import { Message } from 'element-ui';
 
 //错误码处理
 export function codeHandler(opts = {}) {
-	const {code: requestCode, message} = opts;
-	switch (requestCode) {
+  const {
+    code: requestCode,
+    message,
+    messageType
+  } = opts;
+  switch (requestCode) {
 
-		//未登录处理
-		case code.UN_LOGIN:
-			unLogin();
-			break;
+    //未登录处理
+    case code.UN_LOGIN:
+      unLogin();
+      break;
 
-		//只做消息提醒
-		case code.MESSAGE:
+    //只做消息提醒
+    case code.MESSAGE:
       Message({
-				message: message
-			});
-			break;
+        message: message,
+        type: messageType
+      });
+      break;
 
-		//default
-		default:
-			;
-	}
+    //default
+    default:
+      ;
+  }
 }
 
 
