@@ -104,6 +104,9 @@
         immediate: true
       }
     },
+    created() {
+      this.$axios.get(`/home`);
+    },
     mounted() {
       if (this.manageForm.username === '') {
         this.$refs.username.focus()

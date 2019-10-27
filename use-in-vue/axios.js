@@ -10,7 +10,7 @@ import { loading, closeLoading } from '$use-in-vue/element-ui/loading';
 
 // create an axios instance
 const $axios = axios.create({
-  baseURL: '/api',
+  baseURL: '/api/admin',
   timeout: config.axios.timeout
 });
 

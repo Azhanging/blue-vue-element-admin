@@ -6,7 +6,7 @@ const config = utils.extend(publicConfig, {
     login: `/login`
   },
   user: {
-    url: `/mock/get_user_info`
+    url: `/auth/getUserInfo`
   },
   axios: {
     timeout: 1000000
