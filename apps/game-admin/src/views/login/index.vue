@@ -50,13 +50,13 @@
 
       <el-row :gutter="20">
         <el-col :span="12">
-          <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
+          <el-button type="primary" style="width:100%;margin-bottom:30px;"
                      @click.native.prevent="managerHandler('login')">
             login
           </el-button>
         </el-col>
         <el-col :span="12">
-          <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
+          <el-button type="primary" style="width:100%;margin-bottom:30px;"
                      @click.native.prevent="managerHandler('register')">
             register
           </el-button>
@@ -86,7 +86,6 @@
         },
         passwordType: 'password',
         capsTooltip: false,
-        loading: false,
         showDialog: false,
         redirect: undefined,
         otherQuery: {}
@@ -144,7 +143,6 @@
             console.log('error submit!!')
             return false;
           }
-          this.loading = true;
 
           if (type === 'login') {
             apiLoginIn(this.manageForm).then(() => {
@@ -152,17 +150,9 @@
                 path: this.redirect || '/',
                 query: this.otherQuery
               });
-              this.loading = false;
-            }).catch((e) => {
-              console.log(e);
-              this.loading = false;
             });
           } else if (type === 'register') {
-            apiRegister(this.manageForm).then(() => {
-              this.loading = false;
-            }).catch((e) => {
-              this.loading = false;
-            });
+            apiRegister(this.manageForm);
           }
         })
       },

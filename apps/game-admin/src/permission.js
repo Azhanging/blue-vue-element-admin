@@ -3,7 +3,7 @@ import config from '@config';
 import { Message } from 'element-ui';
 import NProgress from 'nprogress';
 import { hasToken, routerToLogin } from '$assets/js/login';
-import { closeLoading } from '$use-in-vue/element-ui/loading';
+import { hideLoading } from '$use-in-vue/element-ui/loading';
 
 router.beforeEach((to, from, next) => {
   NProgress.start();
@@ -30,5 +30,5 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach(() => {
   NProgress.done();
-  closeLoading();
+  hideLoading();
 });

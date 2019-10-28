@@ -2,11 +2,11 @@ import axios from 'axios'
 import config from '@config';
 import utils from 'blue-utils';
 import router, { routerMeta } from '@router';
-import { MessageBox, Message } from 'element-ui'
+import { Message } from 'element-ui'
 import code from '$code/code';    //错误码
 import { codeHandler } from '$code';   //错误码处理
 import { redirect } from '$assets/js/redirect';
-import { loading, closeLoading } from '$use-in-vue/element-ui/loading';
+import { showLoading, hideLoading } from '$use-in-vue/element-ui/loading';
 
 // create an axios instance
 const $axios = axios.create({
@@ -18,18 +18,16 @@ const $axios = axios.create({
 $axios.interceptors.request.use((axiosConfig) => {
   //把路由当前路由的id设置给axios config中
   axiosConfig.routeID = routerMeta.getCurrentRouterID();
-  const isLoading = axiosConfig.isLoading;
+  const isShowLoading = axiosConfig.isShowLoading;
   setHeaderToken(axiosConfig);
   //是否loading显示
-  if (isLoading === undefined || isLoading === true) {
+  if (isShowLoading === undefined || isShowLoading === true) {
     //设置当前的loading的id
-    axiosConfig.loadingID = loading({
-      text: false
-    });
+    showLoading();
   }
   return axiosConfig;
 }, (error) => {
-  closeLoading();
+  hideLoading();
   return Promise.reject(error)
 });
 
@@ -37,9 +35,9 @@ $axios.interceptors.request.use((axiosConfig) => {
 $axios.interceptors.response.use((res) => {
   const status = res.status;
   const axiosConfig = res.config;
-  const isLoading = axiosConfig.isLoading;
-  if (isLoading === undefined || isLoading === true) {
-    closeLoading(axiosConfig.loadingID);
+  const isShowLoading = axiosConfig.isShowLoading;
+  if (isShowLoading === undefined || isShowLoading === true) {
+    hideLoading();
   }
   if (status === 200) {
     const { code: requestCode, message } = res.data;
@@ -70,7 +68,7 @@ $axios.interceptors.response.use((res) => {
   const isTimeout = /timeout/ig.test(error.message);
   const status = isTimeout ? 'timeout' : error.response.status;
   const errorConfig = config.error;
-  closeLoading(axiosConfig.loadingID);
+  hideLoading();
 
   //检查当前的路由标识和当前路由中的id标识是否一样
   //不一样不去执行后面异步的操作
