@@ -27,9 +27,7 @@ module.exports = {
         '$config': resolve(`./config`),
         '$components': resolve(`./components`),
         '$icons': resolve(`./icons`),
-
         '$demo': resolve(`./demo`),
-
         '$assets': resolve(`./assets`),
         '$axios': resolve(`./use-in-vue/axios`),
         '$api': resolve(`./api`),

@@ -1,10 +1,15 @@
 import config from '@config';
-import manager from "./manager";
+import home from "./home";
+import manage from "./manage";
+import errorPage from "./error-page";
 
 const hasDemo = config.view.hasDemo;
 
+//项目路由
 let routes = [
-  ...manager    //manager->(login|register)
+  ...manage,
+  ...home,
+  ...errorPage
 ];
 
 //是否显示demo的东西

@@ -1,4 +1,5 @@
 import store from '@store';
+import BlueQueuePipe from 'blue-queue-pipe';
 
 //loading队列
 const loadingQueue = new BlueQueuePipe();

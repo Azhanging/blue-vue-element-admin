@@ -4,6 +4,7 @@ import App from './App';
 import store from './store';
 import router from './router';
 import { getUserInfo } from "$assets/js/user";
+import '@assets/css/blue-component.scss';
 
 useInVue({
   Vue
