@@ -1,36 +1,29 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on"
+    <el-form ref="managerForm" :model="manageForm" class="login-form" autocomplete="on"
              label-position="left">
 
       <div class="title-container">
-        <h3 class="title">登录</h3>
+        <h3 class="title">manager</h3>
       </div>
 
-      <el-form-item prop="username">
+      <el-form-item prop="username" :rules="$genRules({rule:/.+/,message:'input username error'})">
         <span class="svg-container">
           <svg-icon icon-class="user"/>
         </span>
-        <el-input
-          ref="username"
-          v-model="loginForm.username"
-          placeholder="Username"
-          name="username"
-          type="text"
-          tabindex="1"
-          autocomplete="on"
-        />
+        <el-input ref="username" v-model="manageForm.username" placeholder="Username" name="username" type="text"
+                  tabindex="1" autocomplete="on"/>
       </el-form-item>
 
       <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-        <el-form-item prop="password">
+        <el-form-item prop="password" :rules="$genRules({rule:/.+/,message:'password username error'})">
           <span class="svg-container">
             <svg-icon icon-class="password"/>
           </span>
           <el-input
             :key="passwordType"
             ref="password"
-            v-model="loginForm.password"
+            v-model="manageForm.password"
             :type="passwordType"
             placeholder="Password"
             name="password"
@@ -46,9 +39,30 @@
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
-                 @click.native.prevent="handleLogin">登录
-      </el-button>
+      <el-form-item prop="email" :rules="$genRules({rule:/.+/,message:'email username error'})">
+        <span class="svg-container">
+          <svg-icon icon-class="email"/>
+        </span>
+        <el-input v-model="manageForm.email" placeholder="email" name="email" type="text" tabindex="1"
+                  autocomplete="on"/>
+      </el-form-item>
+
+
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
+                     @click.native.prevent="managerHandler('login')">
+            login
+          </el-button>
+        </el-col>
+        <el-col :span="12">
+          <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
+                     @click.native.prevent="managerHandler('register')">
+            register
+          </el-button>
+        </el-col>
+      </el-row>
+
     </el-form>
   </div>
 </template>
@@ -56,42 +70,19 @@
 <script>
   import { validUsername } from '$demo/utils/validate';
   import SocialSign from './components/SocialSignin';
-  import { apiLoginIn } from "$api";
+  import { apiLoginIn, apiRegister } from "$api";
 
   export default {
     name: 'Login',
     components: { SocialSign },
     data() {
-      const validateUsername = (rule, value, callback) => {
-        if (!validUsername(value)) {
-          callback(new Error('Please enter the correct user name'))
-        } else {
-          callback()
-        }
-      };
-      const validatePassword = (rule, value, callback) => {
-        if (value.length < 6) {
-          callback(new Error('The password can not be less than 6 digits'))
-        } else {
-          callback()
-        }
-      };
       return {
-        loginForm: {
-          username: 'admin',
-          password: '111111'
-        },
-        loginRules: {
-          username: [{
-            required: true,
-            trigger: 'blur',
-            validator: validateUsername
-          }],
-          password: [{
-            required: true,
-            trigger: 'blur',
-            validator: validatePassword
-          }]
+        manageForm: {
+          username: 'blue',
+          password: '123456',
+          email: 'azhanging@qq.com',
+          code: 'code',
+          type: 'admin'
         },
         passwordType: 'password',
         capsTooltip: false,
@@ -114,17 +105,14 @@
       }
     },
     created() {
-      // window.addEventListener('storage', this.afterQRScan)
+      this.$axios.get(`/home`);
     },
     mounted() {
-      if (this.loginForm.username === '') {
+      if (this.manageForm.username === '') {
         this.$refs.username.focus()
-      } else if (this.loginForm.password === '') {
+      } else if (this.manageForm.password === '') {
         this.$refs.password.focus()
       }
-    },
-    destroyed() {
-      // window.removeEventListener('storage', this.afterQRScan)
     },
     methods: {
       checkCapslock({ shiftKey, key } = {}) {
@@ -149,23 +137,31 @@
           this.$refs.password.focus();
         })
       },
-      handleLogin() {
-        this.$refs.loginForm.validate((valid) => {
+      managerHandler(type) {
+        this.$refs['managerForm'].validate((valid) => {
           if (!valid) {
             console.log('error submit!!')
             return false;
           }
           this.loading = true;
-          apiLoginIn(this.loginForm).then(()=>{
-            this.$router.push({
-              path: this.redirect || '/',
-              query: this.otherQuery
+          if (type === 'login') {
+            apiLoginIn(this.manageForm).then(() => {
+              this.$router.push({
+                path: this.redirect || '/',
+                query: this.otherQuery
+              });
+              this.loading = false;
+            }).catch((e) => {
+              console.log(e);
+              this.loading = false;
             });
-            this.loading = false;
-          }).catch((e) => {
-            console.log(e);
-            this.loading = false;
-          });
+          } else if (type === 'register') {
+            apiRegister(this.manageForm).then(() => {
+              this.loading = false;
+            }).catch((e) => {
+              this.loading = false;
+            });
+          }
         })
       },
       getOtherQuery(query) {
@@ -183,11 +179,9 @@
 <style lang="scss">
   /* 修复input 背景不协调 和光标变色 */
   /* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
-
   $bg: #283443;
   $light_gray: #fff;
   $cursor: #fff;
-
   @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
     .login-container .el-input input {
       color: $cursor;
@@ -200,7 +194,6 @@
       display: inline-block;
       height: 47px;
       width: 85%;
-
       input {
         background: transparent;
         border: 0px;
@@ -210,14 +203,12 @@
         color: $light_gray;
         height: 47px;
         caret-color: $cursor;
-
         &:-webkit-autofill {
           box-shadow: 0 0 0px 1000px $bg inset !important;
           -webkit-text-fill-color: $cursor !important;
         }
       }
     }
-
     .el-form-item {
       border: 1px solid rgba(255, 255, 255, 0.1);
       background: rgba(0, 0, 0, 0.1);
@@ -231,13 +222,11 @@
   $bg: #2d3a4b;
   $dark_gray: #889aa4;
   $light_gray: #eee;
-
   .login-container {
     min-height: 100%;
     width: 100%;
     background-color: $bg;
     overflow: hidden;
-
     .login-form {
       position: relative;
       width: 520px;
@@ -246,19 +235,16 @@
       margin: 0 auto;
       overflow: hidden;
     }
-
     .tips {
       font-size: 14px;
       color: #fff;
       margin-bottom: 10px;
-
       span {
         &:first-of-type {
           margin-right: 16px;
         }
       }
     }
-
     .svg-container {
       padding: 6px 5px 6px 15px;
       color: $dark_gray;
@@ -266,10 +252,8 @@
       width: 30px;
       display: inline-block;
     }
-
     .title-container {
       position: relative;
-
       .title {
         font-size: 26px;
         color: $light_gray;
@@ -278,7 +262,6 @@
         font-weight: bold;
       }
     }
-
     .show-pwd {
       position: absolute;
       right: 10px;
@@ -288,13 +271,11 @@
       cursor: pointer;
       user-select: none;
     }
-
     .thirdparty-button {
       position: absolute;
       right: 0;
       bottom: 6px;
     }
-
     @media only screen and (max-width: 470px) {
       .thirdparty-button {
         display: none;

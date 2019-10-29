@@ -1,17 +1,11 @@
 <template>
-  <div class="bc-row">
-    HOME
+  <div class="app-container">
+    首页啊，暂时不知道放什么好啊
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
-  import adminDashboard from './admin';
-
   export default {
-    name: 'Dashboard',
-    components: {
-      adminDashboard
-    }
+    name: 'home'
   }
 </script>

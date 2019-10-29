@@ -5,6 +5,7 @@ import '$icons'; // icon
 import '@/permission'; // permission control
 import '$demo/utils/error-log'; // error log
 import 'nprogress/nprogress.css';
+import { useComponentsInVue } from '$components';
 
 import NProgress from 'nprogress';
 import Cookies from 'js-cookie';
@@ -28,8 +29,11 @@ export function useInVue(opts = {}) {
     Vue
   });
 
+  //注册公共的组件
+  useComponentsInVue(Vue);
+
   Vue.use(Element, {
-    size: Cookies.get('size') || 'medium' // set element-ui default size
+    size: Cookies.get('size') || 'mini' // set element-ui default size
   });
 
   //全局过滤器

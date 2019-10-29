@@ -111,6 +111,7 @@
         const tags = this.$refs.tag
         this.$nextTick(() => {
           for (const tag of tags) {
+            if(!tags.hasOwnProperty(tag)) continue;
             if (tag.to.path === this.$route.path) {
               this.$refs.scrollPane.moveToTarget(tag)
               // when query is different then update

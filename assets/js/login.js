@@ -13,10 +13,10 @@ export function routerToLogin() {
 export function unLogin() {
   //跳转到登录
   routerToLogin();
-  Message({
+  /*Message({
     message: '跳转登录中...',
-    duration: 60000
-  });
+    duration: 1500
+  });*/
 }
 
 //登录成功或的跳转

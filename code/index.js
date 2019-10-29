@@ -1,5 +1,5 @@
 import code from './code';
-import { unLogin } from '$assets/js/login';
+import { unLogin, loginExpire } from '$assets/js/login';
 import { Message } from 'element-ui';
 
 //错误码处理
@@ -22,6 +22,11 @@ export function codeHandler(opts = {}) {
         message: message,
         type: messageType
       });
+      break;
+
+    //登录超时
+    case code.LOGIN_EXPIRE:
+      loginExpire();
       break;
 
     //default

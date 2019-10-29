@@ -1,4 +1,4 @@
-import Layout from '$components/layout';
+import Layout from '$components/Layout';
 import componentsRouter from './modules/components';
 import chartsRouter from './modules/charts';
 import tableRouter from './modules/table';

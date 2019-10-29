@@ -1,4 +1,4 @@
-import Layout from '$components/layout';
+import Layout from '$components/Layout';
 
 const home = [{
   path: '/',
@@ -7,10 +7,9 @@ const home = [{
   children: [{
     path: 'home',
     component: () => import('@/views/home/index'),
-    name: 'Home',
     meta: {
-      title: 'home/首页',
-      icon: 'home',
+      title: '首页',
+      icon: 'el-icon-home',
       affix: true
     }
   }]
