@@ -12,8 +12,12 @@
 
     <BvaBody>
       <el-table border stripe tooltip-effect="light">
-        <el-table-column align="center" label="id"/>
-        <el-table-column align="center" label="资源名"/>
+        <el-table-column align="center" label="id" prop="id"/>
+        <el-table-column align="center" label="资源名" prop="name"/>
+        <el-table-column align="center" label="资源简介" prop="desc"/>
+        <el-table-column align="center" label="资源类型" prop="type"/>
+        <el-table-column align="center" label="是否可交易" prop="trade"/>
+        <el-table-column align="center" label="价格" prop="price"/>
       </el-table>
     </BvaBody>
 
@@ -21,8 +25,25 @@
 </template>
 
 <script>
+
+  import list from '@/mixins/list';
+
+  function getForm() {
+
+  }
+
+  function getData() {
+    return {
+
+    }
+  }
+
   export default {
     name: "resource-index",
+    mixins: [list({
+      getForm,
+      getData
+    })],
     created() {
       this.loadData();
     },
