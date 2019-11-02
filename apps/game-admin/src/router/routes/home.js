@@ -5,11 +5,11 @@ const home = [{
   component: Layout,
   redirect: 'home',
   children: [{
+    name: 'Home',
     path: 'home',
     component: () => import('@/views/home/index'),
     meta: {
       title: '首页',
-      icon: 'el-icon-home',
       affix: true
     }
   }]

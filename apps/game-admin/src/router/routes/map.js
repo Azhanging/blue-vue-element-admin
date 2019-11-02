@@ -3,13 +3,15 @@ import Layout from '$components/Layout';
 const map = [{
   path: '/map',
   component: Layout,
-  redirect: 'map',
+  redirect: 'list',
+  meta: {
+    title: '地图'
+  },
   children: [{
-    path: 'map',
+    path: 'list',
     component: () => import('@/views/map'),
     meta: {
-      title: '地图',
-      icon: 'el-icon-map',
+      title: '地图列表',
       affix: true
     }
   }]

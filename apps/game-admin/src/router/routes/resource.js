@@ -3,19 +3,22 @@ import Layout from '$components/Layout';
 const resource = [{
   path: '/resource',
   component: Layout,
-  redirect: 'resource',
+  redirect: 'list',
+  meta: {
+    title: '资源'
+  },
   children: [{
-    path: 'resource',
+    name: 'resourceList',
+    path: 'list',
     component: () => import('@/views/resource/index'),
     meta: {
-      icon: 'el-icon-folder',
-      title: '资源列表'
+      title: '资源管理'
     }
   }, {
+    name: 'resourceAdd',
     path: 'add',
     component: () => import('@/views/resource/add'),
     meta: {
-      icon: 'el-icon-folder',
       title: '添加资源'
     }
   }]

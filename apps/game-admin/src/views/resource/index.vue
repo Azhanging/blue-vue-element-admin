@@ -2,8 +2,8 @@
   <div class="app-container">
     <BvaHeader title="游戏资源"/>
     <BvaControl>
-      <el-button icon="el-icon-plus" type="primary">
-        新增资源
+      <el-button icon="el-icon-plus" type="primary" @click="$router.push('add')">
+        资源管理
       </el-button>
       <el-button icon="el-icon-refresh">
         刷新
@@ -28,10 +28,6 @@
 
   import list from '@/mixins/list';
 
-  function getForm() {
-
-  }
-
   function getData() {
     return {
 
@@ -39,9 +35,8 @@
   }
 
   export default {
-    name: "resource-index",
+    name: "resourceList",
     mixins: [list({
-      getForm,
       getData
     })],
     created() {

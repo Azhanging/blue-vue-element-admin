@@ -1,5 +1,6 @@
 import config from '@config';
 import home from "./home";
+import configRouter from './config';
 import map from "./map";
 import resource from "./resource";
 import manage from "./manage";
@@ -11,6 +12,7 @@ const hasDemo = config.view.hasDemo;
 let routes = [
   ...manage,
   ...home,
+  ...configRouter,
   ...map,
   ...resource,
   ...errorPage

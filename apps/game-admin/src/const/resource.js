@@ -12,7 +12,7 @@ export function getResourceType() {
   }, {
     label: '强化类',
     value: 4
-  }]
+  }];
 }
 
 //获取是否可交易
