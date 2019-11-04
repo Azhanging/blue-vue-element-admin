@@ -10,7 +10,7 @@ const resource = [{
   children: [{
     name: 'resourceList',
     path: 'list',
-    component: () => import('@/views/resource/index'),
+    component: () => import('@/views/resource/list'),
     meta: {
       title: '资源管理'
     }

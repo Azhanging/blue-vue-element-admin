@@ -8,6 +8,10 @@
   export default {
     name: "select-config-type",
     props: {
+      value: {
+        default: '',
+        type: [String, Number, Array]
+      },
       name: {
         default: '',
         type: String

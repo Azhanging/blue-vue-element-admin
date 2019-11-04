@@ -4,23 +4,24 @@ const config = [{
   path: '/config',
   component: Layout,
   redirect: 'list',
-  meta:{
+  meta: {
     title: '配置',
   },
   children: [{
     name: 'configList',
     path: 'list',
-    component: () => import('@/views/config'),
+    component: () => import('@/views/config/list'),
     meta: {
       title: '配置列表',
       affix: true
     }
   }, {
-    name: 'configAdd',
-    path: 'add',
-    component: () => import('@/views/config/add'),
+    name: 'configDetail',
+    path: 'detail',
+    hidden: true,
+    component: () => import('@/views/config/detail'),
     meta: {
-      title: '添加配置',
+      title: '配置管理',
       affix: true
     }
   }]

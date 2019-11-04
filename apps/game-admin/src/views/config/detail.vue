@@ -39,7 +39,7 @@
 
 <script>
   export default {
-    name: "configAdd",
+    name: "configDetail",
     data() {
       return {
         form: {

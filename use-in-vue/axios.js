@@ -43,6 +43,10 @@ $axios.interceptors.response.use((res) => {
     const { code: requestCode, message } = res.data;
     //success code
     if (requestCode === code.SUCCESS) {
+      message && Message({
+        message,
+        type: 'success'
+      });
       return res.data;
     } else if (requestCode === code.REDIRECT) {    //作为重定向跳转
       let redirectTime = 0;

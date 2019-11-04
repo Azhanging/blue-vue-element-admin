@@ -2,6 +2,10 @@ import utils from 'blue-utils';
 
 function genData(getData) {
   return utils.extend({
+    query: {
+      form: {},
+      pageNum: 1
+    },
     pageInfo: {},
     tableData: [],
     selection: []

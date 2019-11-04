@@ -11,8 +11,8 @@
         </div>
 
         <div>
-          <el-form-item label="资源简介：" prop="desc" :rules="$genRules({rule:/.+/,message:'资源名输入有误'})">
-            <el-input v-model="form.desc" placeholder="请输入资源简介" class="el-form-elm-width-400"/>
+          <el-form-item label="资源简介：" prop="description" :rules="$genRules({rule:/.+/,message:'资源名输入有误'})">
+            <el-input v-model="form.description" placeholder="请输入资源简介" class="el-form-elm-width-400"/>
           </el-form-item>
         </div>
 
@@ -100,7 +100,7 @@
       //资源类型
       name: '',
       //资源简介
-      desc: '',
+      description: '',
       //资源类型
       type: '',
       //是否可交易

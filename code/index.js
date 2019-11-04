@@ -7,7 +7,7 @@ export function codeHandler(opts = {}) {
   const {
     code: requestCode,
     message,
-    messageType
+    type: messageType,
   } = opts;
   switch (requestCode) {
 
@@ -20,7 +20,7 @@ export function codeHandler(opts = {}) {
     case code.MESSAGE:
       Message({
         message: message,
-        type: messageType
+        type: messageType,
       });
       break;
 
