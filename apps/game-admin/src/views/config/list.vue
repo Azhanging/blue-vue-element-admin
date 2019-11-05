@@ -17,7 +17,8 @@
             <el-button @click="$router.push({
               path:'detail',
               query:{
-                id:scope.row.id
+                id: scope.row.id,
+                type: 'edit'
               }
             })">
               修改
@@ -63,7 +64,7 @@
             params: {
               id: row.id
             }
-          }).then(()=>{
+          }).then(() => {
             this.refreshPage();
           });
         });

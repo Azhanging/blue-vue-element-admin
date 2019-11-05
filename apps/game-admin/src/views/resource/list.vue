@@ -2,7 +2,7 @@
   <div class="app-container">
     <BvaHeader title="游戏资源"/>
     <BvaControl>
-      <el-button icon="el-icon-plus" type="primary" @click="$router.push('add')">
+      <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
         资源管理
       </el-button>
       <el-button icon="el-icon-refresh" @click="refresh">
@@ -12,15 +12,19 @@
 
     <BvaBody>
       <el-table border stripe tooltip-effect="light" :data="pageData.tableData">
-        <el-table-column>
+        <el-table-column align="center" label="操作">
           <template slot-scope="scope">
             <el-button @click="$router.push({
               path:'detail',
               query:{
+                id:scope.row.id,
                 type:'edit'
               }
             })">
               修改
+            </el-button>
+            <el-button @click="del(scope.row)">
+              删除
             </el-button>
           </template>
         </el-table-column>
@@ -52,6 +56,18 @@
         this.$axios.get(`/resource/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
+        });
+      },
+      //删除资源
+      del(row) {
+        this.$confirm(`是否删除该资源？`).then(() => {
+          this.$axios.get(`/resource/del`, {
+            params: {
+              id: row.id
+            }
+          }).then(() => {
+            this.refreshPage();
+          });
         });
       }
     }

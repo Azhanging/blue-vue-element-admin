@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="app-container">
-      <BvaHeader title="新增配置"/>
+      <BvaHeader :title="`${isEdit?'更新':'新增'}配置`"/>
 
       <BvaBody>
         <el-form inline ref="form" label-width="200px" :model="form">
@@ -13,7 +13,7 @@
 
           <div>
             <el-form-item label="配置VALUE：" prop="value" :rules="$genRules({rule:/.+/,message:'配置VALUE输入有误'})">
-              <el-input v-model="form.value" placeholder="配置VALUE" class="el-form-elm-width-400"/>
+              <el-input type="textarea" v-model="form.value" placeholder="配置VALUE" class="el-form-elm-width-400"/>
             </el-form-item>
           </div>
 
@@ -48,15 +48,37 @@
           //配置的value
           value: '',
           //注释
-          comments:''
+          comments: ''
         }
       }
     },
+    computed: {
+      isEdit() {
+        return this.$route.query.type === 'edit';
+      }
+    },
+    created() {
+      if (this.isEdit) {
+        this.getDetail();
+      }
+    },
     methods: {
+      getDetail() {
+        const query = this.$route.query;
+        this.$axios.get(`/config/getDetail`, {
+          params: {
+            id: query.id
+          }
+        }).then((res) => {
+          const { data } = res;
+          this.form = data;
+        });
+      },
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          this.$axios.post(`/config/add`, this.form).then(() => {
+          const api = this.isEdit ? `/config/update` : `/config/add`;
+          this.$axios.post(api, this.form).then(() => {
             this.$router.back();
           });
         });

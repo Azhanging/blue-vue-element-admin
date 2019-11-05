@@ -121,7 +121,7 @@
   }
 
   export default {
-    name: "resource-add",
+    name: "resourceDetail",
     computed: {
       //编辑状态
       isEdit() {

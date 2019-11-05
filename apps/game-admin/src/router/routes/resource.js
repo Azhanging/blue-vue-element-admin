@@ -15,9 +15,10 @@ const resource = [{
       title: '资源管理'
     }
   }, {
-    name: 'resourceAdd',
-    path: 'add',
-    component: () => import('@/views/resource/add'),
+    name: 'resourceDetail',
+    path: 'detail',
+    component: () => import('@/views/resource/detail'),
+    hidden: true,
     meta: {
       title: '添加资源'
     }
