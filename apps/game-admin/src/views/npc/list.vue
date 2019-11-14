@@ -3,7 +3,7 @@
     <BvaHeader title="配置列表"/>
     <BvaControl>
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
-        新增配置
+        新增NPC
       </el-button>
       <el-button icon="el-icon-refresh" @click="refresh">
         刷新
@@ -28,10 +28,22 @@
             </el-button>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="id" prop="id"/>
-        <el-table-column align="center" label="配置NAME" prop="name"/>
-        <el-table-column align="center" label="配置VALUE" prop="value"/>
-        <el-table-column align="center" label="配置注释" prop="comments"/>
+        <el-table-column align="center" label="npc名" prop="name"/>
+        <el-table-column align="center" label="是否为商人" prop="isChapman">
+          <template slot-scope="scope">
+            {{scope.row.isChapman ? '是' : '否'}}
+          </template>
+        </el-table-column>
+        <el-table-column align="center" label="创建时间" prop="createTime">
+          <template slot-scope="scope">
+            {{scope.row.createTime | formatDate}}
+          </template>
+        </el-table-column>
+        <el-table-column align="center" label="更新时间" prop="updateTime">
+          <template slot-scope="scope">
+            {{scope.row.createTime | formatDate}}
+          </template>
+        </el-table-column>
       </el-table>
     </BvaBody>
   </div>
@@ -42,7 +54,7 @@
   import list from '@/mixins/list';
 
   export default {
-    name: "configList",
+    name: "npcList",
     mixins: [list()],
     created() {
       this.loadData();
@@ -50,7 +62,7 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/config/list`).then((res) => {
+        this.$axios.get(`/npc/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
         });
@@ -58,8 +70,8 @@
 
       //删除配置
       del(row) {
-        this.$confirm(`是否删除该配置？`).then(() => {
-          this.$axios.get(`/config/del`, {
+        this.$confirm(`是否删除该NPC？`).then(() => {
+          this.$axios.get(`/npc/del`, {
             params: {
               id: row.id
             }

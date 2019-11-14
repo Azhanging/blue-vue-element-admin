@@ -36,12 +36,30 @@ export function timeAgo(time) {
  */
 export function numberFormatter(num, digits) {
   const si = [
-    { value: 1E18, symbol: 'E' },
-    { value: 1E15, symbol: 'P' },
-    { value: 1E12, symbol: 'T' },
-    { value: 1E9, symbol: 'G' },
-    { value: 1E6, symbol: 'M' },
-    { value: 1E3, symbol: 'k' }
+    {
+      value: 1E18,
+      symbol: 'E'
+    },
+    {
+      value: 1E15,
+      symbol: 'P'
+    },
+    {
+      value: 1E12,
+      symbol: 'T'
+    },
+    {
+      value: 1E9,
+      symbol: 'G'
+    },
+    {
+      value: 1E6,
+      symbol: 'M'
+    },
+    {
+      value: 1E3,
+      symbol: 'k'
+    }
   ]
   for (let i = 0; i < si.length; i++) {
     if (num >= si[i].value) {
@@ -65,4 +83,22 @@ export function toThousandFilter(num) {
  */
 export function uppercaseFirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+function fillZero(num) {
+  if (num < 10) {
+    return `0${num}`;
+  }
+  return num;
+}
+
+export function formatDate(time) {
+  const date = new Date(time);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const min = date.getMinutes();
+  const sec = date.getSeconds();
+  return `${year}-${fillZero(month)}-${fillZero(day)} ${fillZero(hours)}:${fillZero(min)}:${fillZero(sec)}`;
 }

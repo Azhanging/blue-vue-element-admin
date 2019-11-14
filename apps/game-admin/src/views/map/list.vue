@@ -1,23 +1,23 @@
 <template>
   <div class="app-container">
-    <BvaHeader title="游戏资源"/>
+    <BvaHeader title="地图列表"/>
     <BvaControl>
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
-        资源管理
+        新增地图
       </el-button>
-      <el-button icon="el-icon-refresh" @click="refresh">
+      <el-button icon="el-icon-refresh">
         刷新
       </el-button>
     </BvaControl>
 
     <BvaBody>
       <el-table border stripe tooltip-effect="light" :data="pageData.tableData">
-        <el-table-column align="center" label="操作" width="200px">
+        <el-table-column align="center" label="操作">
           <template slot-scope="scope">
             <el-button @click="$router.push({
               path:'detail',
               query:{
-                id:scope.row.id,
+                id: scope.row.id,
                 type:'edit'
               }
             })">
@@ -29,19 +29,8 @@
           </template>
         </el-table-column>
         <el-table-column align="center" label="id" prop="id"/>
-        <el-table-column align="center" label="资源名" prop="name"/>
-        <el-table-column align="center" label="资源简介" prop="description"/>
-        <el-table-column align="center" label="资源类型" prop="type"/>
-        <el-table-column align="center" label="是否可交易" prop="trade" width="100"/>
-        <el-table-column align="center" label="价格" prop="price"/>
-        <el-table-column align="center" label="售卖价" prop="marketPrice"/>
-        <el-table-column align="center" label="hp" prop="hp"/>
-        <el-table-column align="center" label="mp" prop="mp"/>
-        <el-table-column align="center" label="exp" prop="exp"/>
-        <el-table-column align="center" label="物理攻击" prop="physicalAttack"/>
-        <el-table-column align="center" label="物理防御" prop="physicalDefense"/>
-        <el-table-column align="center" label="魔法攻击" prop="magicAttack"/>
-        <el-table-column align="center" label="魔法防御" prop="magicDefense"/>
+        <el-table-column align="center" label="地图名" prop="name"/>
+        <el-table-column align="center" label="地图简介" prop="description"/>
       </el-table>
     </BvaBody>
 
@@ -53,7 +42,7 @@
   import list from '@/mixins/list';
 
   export default {
-    name: "resourceList",
+    name: "mapList",
     mixins: [list()],
     created() {
       this.loadData();
@@ -61,7 +50,7 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/resource/list`).then((res) => {
+        this.$axios.get(`/map/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
         });

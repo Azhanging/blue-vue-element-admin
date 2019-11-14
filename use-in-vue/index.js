@@ -12,7 +12,7 @@ import Cookies from 'js-cookie';
 import Element from 'element-ui';
 import $axios from '$axios';
 import config from '@config';
-import * as filters from '@/filters';
+import * as filters from './filters';
 import { genRules } from './validate';
 
 //自定义指令

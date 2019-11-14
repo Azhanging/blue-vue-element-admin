@@ -3,6 +3,9 @@ import home from "./home";
 import configRouter from './config';
 import map from "./map";
 import resource from "./resource";
+import npc from "./npc";
+import monster from "./monster";
+import task from "./task";
 import manage from "./manage";
 import errorPage from "./error-page";
 
@@ -13,8 +16,11 @@ let routes = [
   ...manage,
   ...home,
   ...configRouter,
-  ...map,
   ...resource,
+  ...npc,
+  ...monster,
+  ...task,
+  ...map,
   ...errorPage
 ];
 

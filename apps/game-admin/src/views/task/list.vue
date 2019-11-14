@@ -1,9 +1,9 @@
 <template>
   <div class="app-container">
-    <BvaHeader title="游戏资源"/>
+    <BvaHeader title="任务列表"/>
     <BvaControl>
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
-        资源管理
+        任务管理
       </el-button>
       <el-button icon="el-icon-refresh" @click="refresh">
         刷新
@@ -17,8 +17,8 @@
             <el-button @click="$router.push({
               path:'detail',
               query:{
-                id:scope.row.id,
-                type:'edit'
+                id: scope.row.id,
+                type: 'edit'
               }
             })">
               修改
@@ -29,19 +29,10 @@
           </template>
         </el-table-column>
         <el-table-column align="center" label="id" prop="id"/>
-        <el-table-column align="center" label="资源名" prop="name"/>
-        <el-table-column align="center" label="资源简介" prop="description"/>
-        <el-table-column align="center" label="资源类型" prop="type"/>
-        <el-table-column align="center" label="是否可交易" prop="trade" width="100"/>
-        <el-table-column align="center" label="价格" prop="price"/>
-        <el-table-column align="center" label="售卖价" prop="marketPrice"/>
-        <el-table-column align="center" label="hp" prop="hp"/>
-        <el-table-column align="center" label="mp" prop="mp"/>
-        <el-table-column align="center" label="exp" prop="exp"/>
-        <el-table-column align="center" label="物理攻击" prop="physicalAttack"/>
-        <el-table-column align="center" label="物理防御" prop="physicalDefense"/>
-        <el-table-column align="center" label="魔法攻击" prop="magicAttack"/>
-        <el-table-column align="center" label="魔法防御" prop="magicDefense"/>
+        <el-table-column align="center" label="任务名" prop="name"/>
+        <el-table-column align="center" label="任务简介" prop="description"/>
+        <el-table-column align="center" label="等级" prop="level"/>
+        <el-table-column align="center" label="任务类型" prop="type"/>
       </el-table>
     </BvaBody>
 
@@ -53,7 +44,7 @@
   import list from '@/mixins/list';
 
   export default {
-    name: "resourceList",
+    name: "taskList",
     mixins: [list()],
     created() {
       this.loadData();
@@ -61,15 +52,15 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/resource/list`).then((res) => {
+        this.$axios.get(`/task/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
         });
       },
       //删除资源
       del(row) {
-        this.$confirm(`是否删除该资源？`).then(() => {
-          this.$axios.get(`/resource/del`, {
+        this.$confirm(`是否删除该任务？`).then(() => {
+          this.$axios.get(`/task/del`, {
             params: {
               id: row.id
             }

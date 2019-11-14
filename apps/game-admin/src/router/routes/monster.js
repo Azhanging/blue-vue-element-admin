@@ -1,26 +1,26 @@
 import Layout from '$components/Layout';
 
 const resource = [{
-  path: '/resource',
+  path: '/monster',
   component: Layout,
   redirect: 'list',
   meta: {
-    title: '资源'
+    title: '怪物'
   },
   children: [{
-    name: 'resourceList',
+    name: 'monsterList',
     path: 'list',
-    component: () => import('@/views/resource/list'),
+    component: () => import('@/views/monster/list'),
     meta: {
-      title: '资源'
+      title: '怪物'
     }
   }, {
-    name: 'resourceDetail',
+    name: 'monsterDetail',
     path: 'detail',
-    component: () => import('@/views/resource/detail'),
+    component: () => import('@/views/monster/detail'),
     hidden: true,
     meta: {
-      title: '添加资源'
+      title: '添加怪物'
     }
   }]
 }];

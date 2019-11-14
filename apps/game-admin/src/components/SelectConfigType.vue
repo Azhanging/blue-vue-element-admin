@@ -1,6 +1,6 @@
 <template>
-  <el-select v-model="currentValue" @change="change">
-    <el-option v-for="(item,index) in type" :value="item.value" :label="item.label" :key="index"/>
+  <el-select v-model="currentValue" @change="change" :disabled="disabled">
+    <el-option v-for="(item,index) in data" :value="item.value" :label="item.label" :key="index"/>
   </el-select>
 </template>
 
@@ -8,6 +8,10 @@
   export default {
     name: "select-config-type",
     props: {
+      disabled: {
+        default: false,
+        type: Boolean
+      },
       value: {
         default: '',
         type: [String, Number, Array]
@@ -19,7 +23,7 @@
     },
     data() {
       return {
-        type: [],
+        data: [],
         currentValue: ``
       };
     },
@@ -43,7 +47,8 @@
           }
         }).then((res) => {
           const { data } = res;
-          this.type = JSON.parse(data.value);
+          this.data = JSON.parse(data.value);
+          this.$emit('loaded', this.data);
         });
       },
       change(val) {

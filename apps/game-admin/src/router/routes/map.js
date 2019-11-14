@@ -8,11 +8,19 @@ const map = [{
     title: '地图'
   },
   children: [{
+    name: 'mapList',
     path: 'list',
-    component: () => import('@/views/map'),
+    component: () => import('@/views/map/list'),
     meta: {
-      title: '地图列表',
-      affix: true
+      title: '地图'
+    }
+  }, {
+    name: 'mapDetail',
+    path: 'detail',
+    component: () => import('@/views/map/detail'),
+    hidden: true,
+    meta: {
+      title: '地图管理'
     }
   }]
 }];

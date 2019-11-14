@@ -12,8 +12,7 @@ const config = [{
     path: 'list',
     component: () => import('@/views/config/list'),
     meta: {
-      title: '配置列表',
-      affix: true
+      title: '配置'
     }
   }, {
     name: 'configDetail',
@@ -21,8 +20,7 @@ const config = [{
     hidden: true,
     component: () => import('@/views/config/detail'),
     meta: {
-      title: '配置管理',
-      affix: true
+      title: '配置管理'
     }
   }]
 }];

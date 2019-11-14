@@ -6,20 +6,20 @@
       <BvaBody>
         <el-form inline ref="form" label-width="200px" :model="form">
           <div>
-            <el-form-item label="配置NAME：" prop="name" :rules="$genRules({rule:/.+/,message:'配置NAME输入有误'})">
+            <el-form-item label="NPC名：" prop="name" :rules="$genRules({rule:/.+/,message:'NPC名输入有误'})">
               <el-input v-model="form.name" placeholder="配置NAME" class="bc-width-400"/>
             </el-form-item>
           </div>
 
           <div>
-            <el-form-item label="配置VALUE：" prop="value" :rules="$genRules({rule:/.+/,message:'配置VALUE输入有误'})">
-              <el-input type="textarea" v-model="form.value" placeholder="配置VALUE" class="bc-width-400"/>
+            <el-form-item label="NPC简介：" prop="description" :rules="$genRules({rule:/.+/,message:'NPC简介输入有误'})">
+              <el-input type="textarea" v-model="form.description" placeholder="配置VALUE" class="bc-width-400"/>
             </el-form-item>
           </div>
 
           <div>
-            <el-form-item label="配置注释：" prop="comments" :rules="$genRules({rule:/.+/,message:'配置注释输入有误'})">
-              <el-input v-model="form.comments" placeholder="配置value" class="bc-width-400"/>
+            <el-form-item label="是否为商人：" prop="isChapman" :rules="$genRules({rule:/.+/,message:'配置注释输入有误'})">
+              <SelectConfigType v-model="form.isChapman" name="TRUE_OR_FALSE_TYPE" class="bc-width-400"/>
             </el-form-item>
           </div>
 
@@ -39,16 +39,13 @@
 
 <script>
   export default {
-    name: "configDetail",
+    name: "npcDetail",
     data() {
       return {
         form: {
-          //配置key
           name: '',
-          //配置的value
-          value: '',
-          //注释
-          comments: ''
+          isChapman: '',
+          description: ''
         }
       }
     },
@@ -65,7 +62,7 @@
     methods: {
       getDetail() {
         const query = this.$route.query;
-        this.$axios.get(`/config/detail`, {
+        this.$axios.get(`/npc/detail`, {
           params: {
             id: query.id
           }
@@ -77,7 +74,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/config/update` : `/config/create`;
+          const api = this.isEdit ? `/npc/update` : `/npc/create`;
           this.$axios.post(api, this.form).then(() => {
             this.$router.back();
           });
