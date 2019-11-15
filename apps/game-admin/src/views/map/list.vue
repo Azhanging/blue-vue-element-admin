@@ -5,7 +5,7 @@
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
         新增地图
       </el-button>
-      <el-button icon="el-icon-refresh">
+      <el-button icon="el-icon-refresh" @click="refresh">
         刷新
       </el-button>
     </BvaControl>
@@ -31,6 +31,12 @@
         <el-table-column align="center" label="id" prop="id"/>
         <el-table-column align="center" label="地图名" prop="name"/>
         <el-table-column align="center" label="地图简介" prop="description"/>
+        <el-table-column align="center" label="NPC">
+          <template slot-scope="scope">
+            {{scope.row.npc.join(',')}}
+          </template>
+        </el-table-column>
+        <el-table-column align="center" label="怪物" prop="monster"/>
       </el-table>
     </BvaBody>
 

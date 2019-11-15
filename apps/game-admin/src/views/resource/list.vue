@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <BvaHeader title="游戏资源"/>
+    <BvaHeader title="资源列表"/>
     <BvaControl>
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
         资源管理
