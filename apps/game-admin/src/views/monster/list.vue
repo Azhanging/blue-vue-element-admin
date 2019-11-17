@@ -28,7 +28,6 @@
             </el-button>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="id" prop="id"/>
         <el-table-column align="center" label="怪物名" prop="name"/>
         <el-table-column align="center" label="怪物简介" prop="description"/>
         <el-table-column align="center" label="hp" prop="hp"/>

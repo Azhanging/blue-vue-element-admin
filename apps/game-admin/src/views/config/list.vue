@@ -28,7 +28,6 @@
             </el-button>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="id" prop="id"/>
         <el-table-column align="center" label="配置NAME" prop="name"/>
         <el-table-column align="center" label="配置VALUE" prop="value"/>
         <el-table-column align="center" label="配置注释" prop="comments"/>
