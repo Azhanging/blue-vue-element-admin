@@ -29,11 +29,7 @@
           </template>
         </el-table-column>
         <el-table-column align="center" label="npc名" prop="name"/>
-        <el-table-column align="center" label="是否为商人" prop="isChapman">
-          <template slot-scope="scope">
-            {{scope.row.isChapman ? '是' : '否'}}
-          </template>
-        </el-table-column>
+        <el-table-column align="center" label="是否为商人" prop="isChapmanText"/>
         <el-table-column align="center" label="创建时间" prop="createTime">
           <template slot-scope="scope">
             {{scope.row.createTime | formatDate}}
@@ -63,7 +59,7 @@
       loadData() {
         const pageData = this.pageData;
         this.$axios.get(`/npc/list`).then((res) => {
-          const { data } = res;
+          const {data} = res;
           pageData.tableData = data.list;
         });
       },

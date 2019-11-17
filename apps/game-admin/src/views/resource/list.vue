@@ -31,17 +31,24 @@
         <el-table-column align="center" label="id" prop="id"/>
         <el-table-column align="center" label="资源名" prop="name"/>
         <el-table-column align="center" label="资源简介" prop="description"/>
-        <el-table-column align="center" label="资源类型" prop="type"/>
-        <el-table-column align="center" label="是否可交易" prop="trade" width="100"/>
+        <el-table-column align="center" label="资源类型" prop="typeText"/>
+        <el-table-column align="center" label="是否可交易" prop="tradeText" width="100"/>
         <el-table-column align="center" label="价格" prop="price"/>
         <el-table-column align="center" label="售卖价" prop="marketPrice"/>
         <el-table-column align="center" label="hp" prop="hp"/>
         <el-table-column align="center" label="mp" prop="mp"/>
         <el-table-column align="center" label="exp" prop="exp"/>
+        <el-table-column align="center" label="是否绑定" prop="isBindText"/>
+        <el-table-column align="center" label="时效类型" prop="durationTypeText"/>
+        <el-table-column align="center" label="时效性" prop="duration"/>
         <el-table-column align="center" label="物理攻击" prop="physicalAttack"/>
         <el-table-column align="center" label="物理防御" prop="physicalDefense"/>
         <el-table-column align="center" label="魔法攻击" prop="magicAttack"/>
         <el-table-column align="center" label="魔法防御" prop="magicDefense"/>
+        <el-table-column align="center" label="暴击率" prop="crit"/>
+        <el-table-column align="center" label="命中率" prop="hit"/>
+        <el-table-column align="center" label="闪避率" prop="dodge"/>
+        <el-table-column align="center" label="暴抗率" prop="critResistance"/>
       </el-table>
     </BvaBody>
 
@@ -62,7 +69,7 @@
       loadData() {
         const pageData = this.pageData;
         this.$axios.get(`/resource/list`).then((res) => {
-          const { data } = res;
+          const {data} = res;
           pageData.tableData = data.list;
         });
       },
