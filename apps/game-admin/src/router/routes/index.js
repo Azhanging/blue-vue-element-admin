@@ -23,7 +23,7 @@ let routes = [
     ...task,
     ...map,
     ...occupation,
-  ...errorPage
+    ...errorPage
   ]
 ;
 

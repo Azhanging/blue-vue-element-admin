@@ -1,72 +1,20 @@
 <template>
   <div class="app-container">
-    <BvaHeader :title="(isEdit ? `编辑` : `新建`) + '资源'"/>
+    <BvaHeader :title="(isEdit ? `编辑` : `新建`) + '职业'"/>
     <BvaBody>
       <el-form :model="form" inline label-width="140px" ref="form">
 
-        <!-- 资源名 -->
+        <!-- 职业名 -->
         <div>
-          <el-form-item label="资源名：" prop="name" :rules="$genRules({rule:/.+/,message:'资源名输入有误'})">
-            <el-input v-model="form.name" placeholder="请输入资源名" class="bc-width-400"/>
+          <el-form-item label="职业名：" prop="name" :rules="$genRules({rule:/.+/,message:'职业名输入有误'})">
+            <el-input v-model="form.name" placeholder="请输入职业名" class="bc-width-400"/>
           </el-form-item>
         </div>
 
-        <!-- 资源简介 -->
+        <!-- 职业简介 -->
         <div>
-          <el-form-item label="资源简介：" prop="description" :rules="$genRules({rule:/.+/,message:'资源名输入有误'})">
-            <el-input v-model="form.description" placeholder="请输入资源简介" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- 资源类型 -->
-        <div>
-          <el-form-item label="资源类型：" prop="type" :rules="$genRules({rule:/.+/,message:'请选择资源类型'})">
-            <SelectConfigType v-model="form.type" name="RESOURCE_TYPE" class="bc-width-400"
-                              @change="form.durationType = 0;(form.type !== 3 && (form.occupation = ''))"/>
-          </el-form-item>
-        </div>
-
-        <!-- 职业 -->
-        <div v-if="form.type === 3">
-          <el-form-item label="职业：" prop="occupation" :rules="$genRules({rule:/.+/,message:'请选择职业'})">
-            <SelectToApi v-model="form.occupation" api="/occupation/list" class="bc-width-400"
-                         valueKey="id" labelKey="name"/>
-          </el-form-item>
-        </div>
-
-        <!-- 时效类型 -->
-        <div v-if="form.type === 1">
-          <el-form-item label="时效类型：" prop="durationType" :rules="$genRules({rule:/.+/,message:'请选择时效类型'})">
-            <SelectConfigType v-model="form.durationType" name="DURATION_TYPE" class="bc-width-400"
-                              @change="form.durationType !== 3 && (form.duration = 0)"/>
-          </el-form-item>
-        </div>
-
-        <!-- 时效时间 -->
-        <div v-if="form.durationType === 3">
-          <el-form-item label="资源时效：" prop="duration" :rules="$genRules({rule:/.+/,message:'资源时效输入有误'})">
-            <el-input v-model="form.duration" placeholder="" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- 是否可交易 -->
-        <div>
-          <el-form-item label="是否可交易：" prop="trade" :rules="$genRules({rule:/.+/,message:'请选择是否可交易'})">
-            <SelectConfigType v-model="form.trade" name="TRUE_OR_FALSE_TYPE" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- 价格 -->
-        <div>
-          <el-form-item label="价格：" prop="price" :rules="$genRules({rule:/^\d+$/,message:'价格输入有误'})">
-            <el-input v-model.number="form.price" placeholder="请输入价格" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- 售出价格 -->
-        <div>
-          <el-form-item label="售出价格：" prop="marketPrice" :rules="$genRules({rule:/^\d+$/,message:'售出价格输入有误'})">
-            <el-input v-model.number="form.marketPrice" placeholder="请输入价格" class="bc-width-400"/>
+          <el-form-item label="职业简介：" prop="description" :rules="$genRules({rule:/.+/,message:'职业名输入有误'})">
+            <el-input v-model="form.description" placeholder="请输入职业简介" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -81,20 +29,6 @@
         <div>
           <el-form-item label="mp：" prop="mp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
             <el-input v-model.number="form.mp" placeholder="请输入mp" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- exp -->
-        <div>
-          <el-form-item label="exp：" prop="exp" :rules="$genRules({rule:/^\d+$/,message:'exp输入有误'})">
-            <el-input v-model.number="form.exp" placeholder="请输入exp" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <!-- 是否绑定 -->
-        <div>
-          <el-form-item label="是否绑定：" prop="exp" :rules="$genRules({rule:/^\d+$/,message:'exp输入有误'})">
-            <SelectConfigType name="TRUE_OR_FALSE_TYPE" v-model="form.isBind" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -169,30 +103,12 @@
 
   function getFormData() {
     return {
-      //资源类型
+      //职业类型
       name: '',
-      //资源简介
+      //职业简介
       description: '',
-      //资源类型
-      type: '',
-      //职业使用类型
-      occupation: ``,
-      //是否可交易
-      trade: 1,
-      //售价，针对npc商店的售价
-      price: 1,
-      //出售价，针对npc商店的售价
-      marketPrice: 1,
-      //是否绑定
-      isBind: 0,
-      //时效性类型
-      durationType: 0,
-      //资源的时效时间
-      duration: 0,
-      //下列属性可以参照资源类型来处理
       hp: 0,
       mp: 0,
-      exp: 0,
       physicalAttack: 0,
       physicalDefense: 0,
       magicAttack: 0,
@@ -230,7 +146,7 @@
     methods: {
       getInfo() {
         const query = this.$route.query;
-        this.$axios.get(`/resource/detail`, {
+        this.$axios.get(`/occupation/detail`, {
           params: {
             id: query.id
           }
@@ -242,7 +158,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/resource/update` : `/resource/create`;
+          const api = this.isEdit ? `/occupation/update` : `/occupation/create`;
           this.$axios.post(api, this.form)
             .then(() => {
               this.$router.back();

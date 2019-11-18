@@ -51,7 +51,7 @@
   import list from '@/mixins/list';
 
   export default {
-    name: "resourceList",
+    name: "occupationList",
     mixins: [list()],
     created() {
       this.loadData();
