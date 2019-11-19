@@ -1,6 +1,6 @@
 <template>
   <el-select v-model="currentValue" filterable @change="change" :multiple="multiple">
-    <el-option v-for="(item,index) in data" :value="item[valueKey]" :label="item[labelKey]" :key="index"/>
+    <el-option v-for="(item,index) in data" :value="item[valueKey]" :label="getLabelKey(item)" :key="index"/>
   </el-select>
 </template>
 
@@ -26,7 +26,7 @@
       },
       labelKey: {
         default: 'name',
-        type: String
+        type: [String, Function]
       },
       multiple: {
         default: false,
@@ -52,6 +52,17 @@
       }
     },
     methods: {
+
+      getLabelKey(item) {
+        const labelKey = this.labelKey;
+        if (this.$utils.isStr(labelKey)) {
+          return item[labelKey];
+        } else if (this.$utils.isFunction(labelKey)) {
+          return labelKey(item);
+        }
+        return '';
+      },
+
       getData() {
         const { api, method } = this;
         this.$axios({

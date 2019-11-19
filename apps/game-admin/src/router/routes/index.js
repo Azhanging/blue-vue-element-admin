@@ -8,6 +8,7 @@ import monster from "./monster";
 import task from "./task";
 import manage from "./manage";
 import occupation from "./occupation";
+import skill from "./skill";
 import errorPage from "./error-page";
 
 const hasDemo = config.view.hasDemo;
@@ -23,6 +24,7 @@ let routes = [
     ...task,
     ...map,
     ...occupation,
+    ...skill,
     ...errorPage
   ]
 ;

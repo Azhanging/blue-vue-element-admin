@@ -8,6 +8,7 @@ import 'nprogress/nprogress.css';
 import { useComponentsInVue } from '$components';
 
 import NProgress from 'nprogress';
+import utils from 'blue-utils';
 import Cookies from 'js-cookie';
 import Element from 'element-ui';
 import $axios from '$axios';
@@ -43,6 +44,8 @@ export function useInVue(opts = {}) {
 
   //axios
   Vue.prototype.$axios = $axios;
+
+  Vue.prototype.$utils = utils;
 
   //配置mixin config
   Vue.mixin({

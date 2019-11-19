@@ -17,51 +17,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/map/list.vue">
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/occupation/detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-158">
-              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="435">
+              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/resource/list.vue">
+      <file leaf-file-name="SelectToApi.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="324">
+              <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/skill/list.vue">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/use-in-vue/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+            <state relative-caret-position="-261">
+              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/task/list.vue">
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/map/detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/occupation/list.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,50 +72,20 @@
       <file leaf-file-name="detail.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/resource/detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4508">
-              <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/resource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="occupation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/occupation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="-2889">
+              <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1574124735062" expanded="true" signature="6741:7242" ph="{&quot;name&quot;: ''...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/map.js">
+      <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/task/list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="464">
+              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -134,7 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rewardTypeList</find>
       <find>num</find>
       <find>reward</find>
       <find>typeName</find>
@@ -156,7 +127,6 @@
       <find>任务奖励</find>
       <find>getDepData</find>
       <find>任务依赖</find>
-      <find>Select</find>
       <find>&lt;SelectToApi</find>
       <find>SelectToApi</find>
       <find>刷新</find>
@@ -164,6 +134,8 @@
       <find>get(&quot;/home&quot;)</find>
       <find>资源</find>
       <find>path</find>
+      <find>Select</find>
+      <find>labelKey</find>
     </findStrings>
     <replaceStrings>
       <replace>$assets/css</replace>
@@ -212,9 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/game-admin/src/views/home/index.vue" />
-        <option value="$PROJECT_DIR$/components/index.js" />
-        <option value="$PROJECT_DIR$/apps/game-admin/src/const/resource.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/config/add.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/home.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/components/ConfigComponents/index.js" />
@@ -234,7 +203,6 @@
         <option value="$PROJECT_DIR$/apps/game-admin/dev-server.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/components/index.js" />
         <option value="$PROJECT_DIR$/use-in-vue/filters.js" />
-        <option value="$PROJECT_DIR$/use-in-vue/index.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/components/SelectConfigType.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/npc.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/map.js" />
@@ -244,7 +212,6 @@
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/task.js" />
         <option value="$PROJECT_DIR$/components/BvaBody.vue" />
         <option value="$PROJECT_DIR$/components/BvaFooter.vue" />
-        <option value="$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/assets/css/app.scss" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/monster/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/task/detail.vue" />
@@ -256,13 +223,18 @@
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/map/list.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/monster/list.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/task/list.vue" />
-        <option value="$PROJECT_DIR$/apps/game-admin/src/views/occupation/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/occupation.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/resource/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/resource/list.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/occupation/list.vue" />
+        <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/skill.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/router/routes/index.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/skill/list.vue" />
+        <option value="$PROJECT_DIR$/apps/game-admin/src/views/skill/detail.vue" />
+        <option value="$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/use-in-vue/index.js" />
+        <option value="$PROJECT_DIR$/apps/game-admin/src/views/occupation/detail.vue" />
       </list>
     </option>
   </component>
@@ -284,8 +256,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="734" />
-    <option name="height" value="867" />
+    <option name="y" value="2" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -306,7 +279,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,42 +289,13 @@
             <path>
               <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
               <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="skill" type="462c0819:PsiDirectoryNode" />
+              <item name="use-in-vue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,19 +308,19 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\achang\github\blue-vue-element-admin-program\apps\game-admin\src\router\routes" />
+      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\views" />
+      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\router\routes" />
+      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\components" />
+      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\views\map" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\achang\github\blue-vue-element-admin-program\apps\game-admin\src\views" />
       <recent name="E:\achang\github\blue-vue-element-admin-program\use-in-vue" />
       <recent name="E:\achang\github\blue-vue-element-admin-program\apps\game-admin\src\router\routes" />
       <recent name="D:\achang\web\blue-vue-element-admin-program\use-in-vue" />
       <recent name="D:\achang\web\blue-vue-element-admin-program\assets\css\element-admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\views" />
-      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\router\routes" />
-      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\components" />
-      <recent name="E:\achang\web\blue-vue-element-admin-program\apps\game-admin\src\views\map" />
-      <recent name="E:\achang\github\blue-vue-element-admin-program\apps\game-admin\src\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -520,11 +463,12 @@
       <workItem from="1573954992529" duration="2997000" />
       <workItem from="1573965048503" duration="37000" />
       <workItem from="1574077968257" duration="6818000" />
+      <workItem from="1574124877006" duration="14827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399377000" />
+    <option name="totallyTimeSpent" value="414204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,26 +481,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1227608" sideWeight="0.36" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19072708" sideWeight="0.35555556" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24581006" sideWeight="0.43737957" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1227608" sideWeight="0.64" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24581006" sideWeight="0.43737957" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24236038" sideWeight="0.64444447" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8370119" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26976496" sideWeight="0.41855204" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -589,25 +532,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/use-in-vue/axios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Layout/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/mixins/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -672,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/use-in-vue/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/filters/index.js" />
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/npc.js" />
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/config.js">
@@ -718,7 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue" />
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/assets/css/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -728,13 +649,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/task/detail.vue" />
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/monster/detail.vue" />
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -750,13 +664,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/npc/detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/map/detail.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -795,15 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-447">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,42 +729,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/occupation/detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/task/list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/resource/detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4508">
-          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/resource/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="1015">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/occupation/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="1537">
+          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -881,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/occupation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="232">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
@@ -895,28 +769,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/skill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/router/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="783">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/skill/list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="33" column="66" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="66" />
+          <folding>
+            <element signature="e#4134#4377#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/map/list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="638">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/skill/list.vue">
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/skill/detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="-883">
+          <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/resource/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2889">
+          <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+          <folding>
+            <marker date="1574124735062" expanded="true" signature="6741:7242" ph="{&quot;name&quot;: ''...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/map/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/task/list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/use-in-vue/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-261">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/occupation/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
           <folding />
         </state>
       </provider>

@@ -28,18 +28,46 @@
             </el-button>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="技能名" prop="name"/>
-        <el-table-column align="center" label="技能简介" prop="description"/>
-        <el-table-column align="center" label="hp" prop="hp"/>
-        <el-table-column align="center" label="mp" prop="mp"/>
-        <el-table-column align="center" label="物理攻击" prop="physicalAttack"/>
-        <el-table-column align="center" label="物理防御" prop="physicalDefense"/>
-        <el-table-column align="center" label="魔法攻击" prop="magicAttack"/>
-        <el-table-column align="center" label="魔法防御" prop="magicDefense"/>
-        <el-table-column align="center" label="暴击率" prop="crit"/>
-        <el-table-column align="center" label="命中率" prop="hit"/>
-        <el-table-column align="center" label="闪避率" prop="dodge"/>
-        <el-table-column align="center" label="暴抗率" prop="critResistance"/>
+        <el-table-column align="center" label="技能名" prop="name" width="160px"/>
+        <el-table-column align="center" label="技能简介" prop="description" width="160px"/>
+        <el-table-column align="center" label="等级" prop="level" width="160px"/>
+        <el-table-column align="center" label="是否为增益" prop="isGain" width="160px"/>
+
+        <el-table-column align="center" label="hp" prop="hp" width="160px"/>
+        <el-table-column align="center" label="hp增益" prop="hpGain" width="160px"/>
+        <el-table-column align="center" label="hp增益持续时间" prop="hpGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="mp" prop="mp" width="160px"/>
+        <el-table-column align="center" label="mp增益" prop="mpGain" width="160px"/>
+        <el-table-column align="center" label="mp增益持续时间" prop="mpGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="物理攻击" prop="physicalAttack" width="160px"/>
+        <el-table-column align="center" label="物理攻击增益" prop="physicalAttackGain" width="160px"/>
+        <el-table-column align="center" label="物理攻击增益持续时间" prop="physicalAttackGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="物理防御" prop="physicalDefense" width="160px"/>
+        <el-table-column align="center" label="物理防御增益" prop="physicalDefenseGain" width="160px"/>
+        <el-table-column align="center" label="物理防御增益持续时间" prop="physicalDefenseGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="魔法攻击" prop="magicAttack" width="160px"/>
+        <el-table-column align="center" label="魔法攻击增益" prop="magicAttackGain" width="160px"/>
+        <el-table-column align="center" label="魔法攻击增益持续时间" prop="magicAttackGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="魔法防御" prop="magicDefense" width="160px"/>
+        <el-table-column align="center" label="魔法防御增益" prop="magicDefenseGain" width="160px"/>
+        <el-table-column align="center" label="魔法防御增益持续时间" prop="magicDefenseGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="暴击率增益" prop="critGain" width="160px"/>
+        <el-table-column align="center" label="暴击率增益持续时间" prop="critGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="命中率增益" prop="hitGain" width="160px"/>
+        <el-table-column align="center" label="命中率增益持续时间" prop="hitGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="闪避率增益" prop="dodgeGain" width="160px"/>
+        <el-table-column align="center" label="闪避率增益持续时间" prop="dodgeGainDuration" width="160px"/>
+
+        <el-table-column align="center" label="暴抗率增益" prop="critResistanceGain" width="160px"/>
+        <el-table-column align="center" label="暴抗率增益持续时间" prop="critResistanceGainDuration" width="160px"/>
       </el-table>
     </BvaBody>
 

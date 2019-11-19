@@ -32,6 +32,14 @@
           </el-form-item>
         </div>
 
+        <!-- 技能 -->
+        <div>
+          <el-form-item label="技能：" :rules="$genRules({type:'array',message:'请选择技能'})">
+            <SelectToApi v-model="form.skill" :multiple="true" api="/skill/list" valueKey="id" :labelKey="(item)=>`${item.name},LV:${item.level}`"
+                         class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
         <!-- 物理攻击 -->
         <div>
           <el-form-item label="物理攻击：" prop="physicalAttack" :rules="$genRules({rule:/^\d+$/,message:'物理攻击值输入有误'})">
@@ -109,6 +117,8 @@
       description: '',
       hp: 0,
       mp: 0,
+      //技能
+      skill: [],
       physicalAttack: 0,
       physicalDefense: 0,
       magicAttack: 0,
