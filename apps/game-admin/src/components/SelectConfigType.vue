@@ -1,5 +1,5 @@
 <template>
-  <el-select v-model="currentValue" @change="change" :disabled="disabled">
+  <el-select filterable v-model="currentValue" @change="change" :disabled="disabled">
     <el-option v-for="(item,index) in data" :value="item.value" :label="item.label" :key="index"/>
   </el-select>
 </template>
