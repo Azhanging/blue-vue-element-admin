@@ -15,7 +15,7 @@ const devServer = {
       target: `http:localhost:${port}/mock`,
     },
     '/api': {
-      target: `http://localhost:3001`
+      target: `http://localhost:3000`
     }
   }
 };

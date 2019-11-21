@@ -23,6 +23,19 @@
             </el-form-item>
           </div>
 
+          <div v-if="form.isChapman === 1" key="resource">
+            <el-form-item label="绑定资源：" prop="resource" :rules="$genRules({type:'array',message:'请选择绑定资源'})">
+              <SelectToApi v-model="form.resource" api="/resource/list" class="bc-width-400"/>
+            </el-form-item>
+          </div>
+
+          <div>
+            <el-form-item label="绑定任务：">
+              <SelectToApi v-model="form.task" api="/task/list" class="bc-width-400"/>
+            </el-form-item>
+          </div>
+
+
         </el-form>
       </BvaBody>
     </div>
@@ -44,8 +57,13 @@
       return {
         form: {
           name: '',
+          description: '',
+          //是否为商人
           isChapman: '',
-          description: ''
+          //绑定任务
+          task: [],
+          //资源
+          resource: []
         }
       }
     },
