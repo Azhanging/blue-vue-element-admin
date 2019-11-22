@@ -2,7 +2,7 @@ import Layout from '$components/Layout';
 
 const resource = [{
   path: '/monster',
-  component: Layout,
+  component: () => import('$components/SpaceLayout.vue'),
   redirect: 'list',
   meta: {
     title: '怪物'
@@ -10,14 +10,14 @@ const resource = [{
   children: [{
     name: 'monsterList',
     path: 'list',
-    component: () => import('@/views/monster/list'),
+    component: () => import('@/views/scene/monster/list'),
     meta: {
       title: '怪物'
     }
   }, {
     name: 'monsterDetail',
     path: 'detail',
-    component: () => import('@/views/monster/detail'),
+    component: () => import('@/views/scene/monster/detail'),
     hidden: true,
     meta: {
       title: '添加怪物'

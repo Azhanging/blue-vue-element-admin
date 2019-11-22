@@ -30,7 +30,7 @@
         <div>
           <el-form-item label="任务依赖：">
             <!-- 奖励类型 -->
-            <SelectToApi v-model="form.dependent" :multiple="true" api="/task/list" labelKey="name" class="bc-width-400"/>
+            <SelectToApi v-model="form.dependent" :multiple="true" api="/scene/task/list" labelKey="name" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -89,7 +89,7 @@
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
                     <template v-else>
                       {{'-'}}
                     </template>
@@ -124,7 +124,7 @@
               <SelectConfigType v-model="rewardData.type" name="REWARD_TYPE" class="bc-width-200"
                                 @change="rewardData.chance = 100"/>
               <!-- 资源列表 -->
-              <SelectToApi api="/resource/list" v-model="rewardData.resourceId" v-show="rewardData.type === 1"/>
+              <SelectToApi api="/scene/resource/list" v-model="rewardData.resourceId" v-show="rewardData.type === 1"/>
               <!-- 概率掉落 -->
               <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
                         placeholder="资源概率掉落1-100"/>
@@ -151,7 +151,7 @@
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
                     <template v-else>
                       {{'-'}}
                     </template>
@@ -180,11 +180,11 @@
                                 @change="requirementData.resourceId = '',requirementData.monsterId = ''"
                                 class="bc-width-200"/>
               <!-- 资源列表 -->
-              <SelectToApi api="/resource/list" v-model="requirementData.resourceId"
+              <SelectToApi api="/scene/resource/list" v-model="requirementData.resourceId"
                            v-show="requirementData.type === 1"/>
 
               <!-- 怪物列表 -->
-              <SelectToApi api="/monster/list" v-model="requirementData.monsterId"
+              <SelectToApi api="/scene/monster/list" v-model="requirementData.monsterId"
                            v-show="requirementData.type === 2"/>
 
               <!-- 奖励的数量或者是奖励的量值 -->
@@ -296,7 +296,7 @@
     methods: {
       getInfo() {
         const query = this.$route.query;
-        this.$axios.get(`/task/detail`, {
+        this.$axios.get(`/scene/task/detail`, {
           params: {
             id: query.id
           }
@@ -344,7 +344,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/task/update` : `/task/create`;
+          const api = this.isEdit ? `/scene/task/update` : `/scene/task/create`;
           this.$axios.post(api, this.form)
             .then(() => {
               this.$router.back();

@@ -19,14 +19,14 @@
 
           <div>
             <el-form-item label="添加NPC：">
-              <SelectToApi v-model="form.npc" :multiple="true" api="/npc/list" valueKey="id" labelKey="name"
+              <SelectToApi v-model="form.npc" :multiple="true" api="/scene/npc/list" valueKey="id" labelKey="name"
                            class="bc-width-400"/>
             </el-form-item>
           </div>
 
           <div>
             <el-form-item label="添加怪物：">
-              <SelectToApi v-model="form.monster" :multiple="true" api="/monster/list" valueKey="id" labelKey="name"
+              <SelectToApi v-model="form.monster" :multiple="true" api="/scene/monster/list" valueKey="id" labelKey="name"
                            class="bc-width-400"/>
             </el-form-item>
           </div>
@@ -71,7 +71,7 @@
     methods: {
       getDetail() {
         const query = this.$route.query;
-        this.$axios.get(`/map/detail`, {
+        this.$axios.get(`/scene/map/detail`, {
           params: {
             id: query.id
           }
@@ -83,7 +83,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/map/update` : `/map/create`;
+          const api = this.isEdit ? `/scene/map/update` : `/scene/map/create`;
           this.$axios.post(api, this.form).then(() => {
             this.$router.back();
           });

@@ -25,13 +25,13 @@
 
           <div v-if="form.isChapman === 1" key="resource">
             <el-form-item label="绑定资源：" prop="resource" :rules="$genRules({type:'array',message:'请选择绑定资源'})">
-              <SelectToApi v-model="form.resource" api="/resource/list" class="bc-width-400" :multiple="true"/>
+              <SelectToApi v-model="form.resource" api="/scene/resource/list" class="bc-width-400" :multiple="true"/>
             </el-form-item>
           </div>
 
           <div>
             <el-form-item label="绑定任务：">
-              <SelectToApi v-model="form.task" api="/task/list" class="bc-width-400" :multiple="true"/>
+              <SelectToApi v-model="form.task" api="/scene/task/list" class="bc-width-400" :multiple="true"/>
             </el-form-item>
           </div>
 
@@ -80,7 +80,7 @@
     methods: {
       getDetail() {
         const query = this.$route.query;
-        this.$axios.get(`/npc/detail`, {
+        this.$axios.get(`/scene/npc/detail`, {
           params: {
             id: query.id
           }
@@ -92,7 +92,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/npc/update` : `/npc/create`;
+          const api = this.isEdit ? `/scene/npc/update` : `/scene/npc/create`;
           this.$axios.post(api, this.form).then(() => {
             this.$router.back();
           });

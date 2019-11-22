@@ -1,9 +1,9 @@
 <template>
   <div class="app-container">
-    <BvaHeader title="配置列表"/>
+    <BvaHeader title="地图列表"/>
     <BvaControl>
       <el-button icon="el-icon-plus" type="primary" @click="$router.push('detail')">
-        新增NPC
+        新增地图
       </el-button>
       <el-button icon="el-icon-refresh" @click="refresh">
         刷新
@@ -18,7 +18,7 @@
               path:'detail',
               query:{
                 id: scope.row.id,
-                type: 'edit'
+                type:'edit'
               }
             })">
               修改
@@ -28,20 +28,17 @@
             </el-button>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="npc名" prop="name"/>
-        <el-table-column align="center" label="是否为商人" prop="isChapmanText"/>
-        <el-table-column align="center" label="创建时间" prop="createTime">
+        <el-table-column align="center" label="地图名" prop="name"/>
+        <el-table-column align="center" label="地图简介" prop="description"/>
+        <el-table-column align="center" label="NPC">
           <template slot-scope="scope">
-            {{scope.row.createTime | formatDate}}
+            {{scope.row.npc.join(',')}}
           </template>
         </el-table-column>
-        <el-table-column align="center" label="更新时间" prop="updateTime">
-          <template slot-scope="scope">
-            {{scope.row.createTime | formatDate}}
-          </template>
-        </el-table-column>
+        <el-table-column align="center" label="怪物" prop="monster"/>
       </el-table>
     </BvaBody>
+
   </div>
 </template>
 
@@ -50,7 +47,7 @@
   import list from '@/mixins/list';
 
   export default {
-    name: "npcList",
+    name: "mapList",
     mixins: [list()],
     created() {
       this.loadData();
@@ -58,16 +55,15 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/npc/list`).then((res) => {
-          const {data} = res;
+        this.$axios.get(`/scene/map/list`).then((res) => {
+          const { data } = res;
           pageData.tableData = data.list;
         });
       },
-
-      //删除配置
+      //删除资源
       del(row) {
-        this.$confirm(`是否删除该NPC？`).then(() => {
-          this.$axios.get(`/npc/del`, {
+        this.$confirm(`是否删除该资源？`).then(() => {
+          this.$axios.get(`/scene/map/del`, {
             params: {
               id: row.id
             }

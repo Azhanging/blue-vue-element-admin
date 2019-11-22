@@ -55,7 +55,7 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/monster/list`).then((res) => {
+        this.$axios.get(`/scene/monster/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
         });
@@ -63,7 +63,7 @@
       //删除资源
       del(row) {
         this.$confirm(`是否删除该怪物？`).then(() => {
-          this.$axios.get(`/monster/del`, {
+          this.$axios.get(`/scene/monster/del`, {
             params: {
               id: row.id
             }

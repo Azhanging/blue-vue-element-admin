@@ -2,7 +2,7 @@ import Layout from '$components/Layout';
 
 const map = [{
   path: '/map',
-  component: Layout,
+  component: () => import('$components/SpaceLayout.vue'),
   redirect: 'list',
   meta: {
     title: '地图'
@@ -10,14 +10,14 @@ const map = [{
   children: [{
     name: 'mapList',
     path: 'list',
-    component: () => import('@/views/map/list'),
+    component: () => import('@/views/scene/map/list'),
     meta: {
       title: '地图'
     }
   }, {
     name: 'mapDetail',
     path: 'detail',
-    component: () => import('@/views/map/detail'),
+    component: () => import('@/views/scene/map/detail'),
     hidden: true,
     meta: {
       title: '地图管理'

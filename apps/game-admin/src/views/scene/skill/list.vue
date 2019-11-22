@@ -87,7 +87,7 @@
     methods: {
       loadData() {
         const pageData = this.pageData;
-        this.$axios.get(`/skill/list`).then((res) => {
+        this.$axios.get(`/scene/skill/list`).then((res) => {
           const { data } = res;
           pageData.tableData = data.list;
         });
@@ -95,7 +95,7 @@
       //删除技能
       del(row) {
         this.$confirm(`是否删除该技能？`).then(() => {
-          this.$axios.get(`/skill/del`, {
+          this.$axios.get(`/scene/skill/del`, {
             params: {
               id: row.id
             }

@@ -40,7 +40,7 @@
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
                     <template v-else>
                       -
                     </template>
@@ -72,11 +72,14 @@
           <div>
             <el-form-item label=" ">
               <!-- 奖励类型 -->
-              <SelectConfigType v-model.number="rewardData.type" name="REWARD_TYPE" class="bc-width-200" @change="rewardData.chance = 100"/>
+              <SelectConfigType v-model.number="rewardData.type" name="REWARD_TYPE" class="bc-width-200"
+                                @change="rewardData.chance = 100"/>
               <!-- 资源列表 -->
-              <SelectToApi api="/resource/list" v-model.number="rewardData.resourceId" v-show="rewardData.type === 1"/>
+              <SelectToApi api="/scene/resource/list" v-model.number="rewardData.resourceId"
+                           v-show="rewardData.type === 1"/>
               <!-- 概率掉落 -->
-              <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200" placeholder="资源概率掉落1-100"/>
+              <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
+                        placeholder="资源概率掉落1-100"/>
               <!-- 奖励的数量或者是奖励的量值 -->
               <el-input v-model.number="rewardData.amount" class="bc-width-200" placeholder="奖励的数量或者是奖励的量值"/>
 
@@ -112,6 +115,34 @@
           </el-form-item>
         </div>
 
+        <!-- 暴击率 -->
+        <div>
+          <el-form-item label="暴击率：" prop="crit" :rules="$genRules({rule:/^\d+$/,message:'暴击率输入有误'})">
+            <el-input v-model.number="form.crit" placeholder="请输入暴击率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 命中率 -->
+        <div>
+          <el-form-item label="命中率：" prop="hit" :rules="$genRules({rule:/^\d+$/,message:'命中率输入有误'})">
+            <el-input v-model.number="form.hit" placeholder="请输入命中率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 闪避率 -->
+        <div>
+          <el-form-item label="闪避率：" prop="dodge" :rules="$genRules({rule:/^\d+$/,message:'闪避率输入有误'})">
+            <el-input v-model.number="form.dodge" placeholder="请输入闪避率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 暴抗率 -->
+        <div>
+          <el-form-item label="暴抗率：" prop="critResistance" :rules="$genRules({rule:/^\d+$/,message:'暴击抵抗率输入有误'})">
+            <el-input v-model.number="form.critResistance" placeholder="请输入暴抗率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
         <BvaFooter>
           <el-button @click="submit" type="primary">
             提交
@@ -139,7 +170,17 @@
       physicalAttack: 1,
       physicalDefense: 1,
       magicAttack: 1,
-      magicDefense: 1
+      magicDefense: 1,
+
+      //暴击率
+      crit: 0,
+      //命中率
+      hit: 0,
+      //闪避率
+      dodge: 0,
+      //暴击抵抗率
+      critResistance: 0
+
     }
   }
 
@@ -185,7 +226,7 @@
     methods: {
       getInfo() {
         const query = this.$route.query;
-        this.$axios.get(`/monster/detail`, {
+        this.$axios.get(`/scene/monster/detail`, {
           params: {
             id: query.id
           }
@@ -216,7 +257,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/monster/update` : `/monster/create`;
+          const api = this.isEdit ? `/scene/monster/update` : `/scene/monster/create`;
           this.$axios.post(api, this.form)
             .then(() => {
               this.$router.back();

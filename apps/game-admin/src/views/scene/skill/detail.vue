@@ -320,7 +320,7 @@
 
       getInfo() {
         const query = this.$route.query;
-        this.$axios.get(`/skill/detail`, {
+        this.$axios.get(`/scene/skill/detail`, {
           params: {
             id: query.id
           }
@@ -332,7 +332,7 @@
       submit() {
         this.$refs['form'].validate((status) => {
           if (!status) return;
-          const api = this.isEdit ? `/skill/update` : `/skill/create`;
+          const api = this.isEdit ? `/scene/skill/update` : `/scene/skill/create`;
           this.$axios.post(api, this.form)
             .then(() => {
               this.$router.back();
