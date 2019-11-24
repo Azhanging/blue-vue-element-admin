@@ -22,14 +22,21 @@
         <div>
           <el-form-item label="资源类型：" prop="type" :rules="$genRules({rule:/.+/,message:'请选择资源类型'})">
             <SelectConfigType v-model="form.type" name="RESOURCE_TYPE" class="bc-width-400"
-                              @change="form.durationType = 0;(form.type !== 3 && (form.occupation = ''))"/>
+                              @change="changeType"/>
+          </el-form-item>
+        </div>
+
+        <!-- 分组数量 -->
+        <div v-if="form.type && form.type !== 3">
+          <el-form-item label="分组数量：" prop="groupAmount" :rules="$genRules({rule:/^\d+$/,message:'分组数量输入有误'})">
+            <el-input v-model.number="form.groupAmount" placeholder="请输入hp" class="bc-width-400"/>
           </el-form-item>
         </div>
 
         <!-- 职业 -->
         <div v-if="form.type === 3">
-          <el-form-item label="职业：" prop="occupation" :rules="$genRules({rule:/.+/,message:'请选择职业'})">
-            <SelectToApi v-model="form.occupation" api="/scene/occupation/list" class="bc-width-400"
+          <el-form-item label="职业：" prop="occupationId" :rules="$genRules({rule:/.+/,message:'请选择职业'})">
+            <SelectToApi v-model="form.occupationId" api="/scene/occupation/list" class="bc-width-400"
                          valueKey="id" labelKey="name"/>
           </el-form-item>
         </div>
@@ -176,13 +183,15 @@
       //资源类型
       type: '',
       //职业使用类型
-      occupation: ``,
+      occupationId: ``,
       //是否可交易
       trade: 1,
       //售价，针对npc商店的售价
       price: 1,
       //出售价，针对npc商店的售价
       marketPrice: 1,
+      //分组数量
+      groupAmount: 1,
       //是否绑定
       isBind: 0,
       //时效性类型
@@ -228,6 +237,15 @@
       };
     },
     methods: {
+
+      //修改资源类型
+      changeType(val) {
+        const form = this.form;
+        form.durationType = 0;
+        val !== 3 && (form.occupation = '');
+        val === 3 && (form.groupAmount = 1);
+      },
+
       getInfo() {
         const query = this.$route.query;
         this.$axios.get(`/scene/resource/detail`, {
@@ -235,7 +253,7 @@
             id: query.id
           }
         }).then((res) => {
-          const { data } = res;
+          const {data} = res;
           this.form = data;
         });
       },

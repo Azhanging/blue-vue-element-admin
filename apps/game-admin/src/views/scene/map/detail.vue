@@ -18,6 +18,13 @@
           </div>
 
           <div>
+            <el-form-item label="其他地图：">
+              <SelectToApi v-model="form.map" :multiple="true" api="/scene/map/list" valueKey="id" labelKey="name"
+                           class="bc-width-400"/>
+            </el-form-item>
+          </div>
+
+          <div>
             <el-form-item label="添加NPC：">
               <SelectToApi v-model="form.npc" :multiple="true" api="/scene/npc/list" valueKey="id" labelKey="name"
                            class="bc-width-400"/>
@@ -54,7 +61,8 @@
           name: '',
           description: '',
           npc: [],
-          monster: []
+          monster: [],
+          map: []
         }
       }
     },
@@ -76,7 +84,7 @@
             id: query.id
           }
         }).then((res) => {
-          const { data } = res;
+          const {data} = res;
           this.form = data;
         });
       },
