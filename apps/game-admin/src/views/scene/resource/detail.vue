@@ -26,6 +26,14 @@
           </el-form-item>
         </div>
 
+        <!-- 资源类型 -->
+        <div>
+          <el-form-item label="装备类型：" prop="equipmentType" :rules="$genRules({rule:/^\d+$/,message:'请选择装备类型'})"
+                        v-if="form.type === 3">
+            <SelectConfigType v-model="form.equipmentType" name="EQUIPMENT_TYPE" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
         <!-- 分组数量 -->
         <div v-if="form.type && form.type !== 3">
           <el-form-item label="分组数量：" prop="groupAmount" :rules="$genRules({rule:/^\d+$/,message:'分组数量输入有误'})">
@@ -182,6 +190,8 @@
       description: '',
       //资源类型
       type: '',
+      //装备类型
+      equipmentType: '',
       //职业使用类型
       occupationId: ``,
       //是否可交易
@@ -253,7 +263,7 @@
             id: query.id
           }
         }).then((res) => {
-          const {data} = res;
+          const { data } = res;
           this.form = data;
         });
       },

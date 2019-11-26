@@ -46,6 +46,13 @@
           </el-form-item>
         </div>
 
+        <!-- 增益时效时间 -->
+        <div>
+          <el-form-item label="增益时效时间：" prop="duration" :rules="$genRules({rule:/^\d+$/,message:'增益时效时间输入有误'})">
+            <el-input v-model.number="form.duration" placeholder="请输入增益时效时间" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
         <!-- hp -->
         <div>
           <el-form-item label="hp：" prop="hp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
@@ -59,13 +66,6 @@
           </el-form-item>
         </div>
 
-        <div v-if="form.isGain === 1">
-          <el-form-item label="hp增益持续时间：" prop="hpGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'hp增益持续时间输入有误'})">
-            <el-input v-model.number="form.hpGainDuration" placeholder="请输入hp增益持续时间" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
         <!-- mp -->
         <div>
           <el-form-item label="mp：" prop="mp" :rules="$genRules({rule:/^\d+$/,message:'mp输入有误'})">
@@ -76,13 +76,6 @@
         <div v-if="form.isGain === 1">
           <el-form-item label="mp增益：" prop="mpGain" :rules="$genRules({rule:/^\d+$/,message:'mp增益输入有误'})">
             <el-input v-model.number="form.mpGain" placeholder="请输入mp增益" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <div v-if="form.isGain === 1">
-          <el-form-item label="mp增益持续时间：" prop="mpGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'mp增益持续时间输入有误'})">
-            <el-input v-model.number="form.mpGainDuration" placeholder="请输入mp增益持续时间" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -100,27 +93,11 @@
           </el-form-item>
         </div>
 
-        <div v-if="form.isGain === 1">
-          <el-form-item label="物理攻击增益持续时间：" prop="physicalAttackGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'物理攻击增益持续时间输入有误'})">
-            <el-input v-model.number="form.physicalAttackGainDuration" placeholder="请输入物理攻击增益持续时间"
-                      class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
         <!-- 物理防御 -->
         <div v-if="form.isGain === 1">
           <el-form-item label="物理防御增益：" prop="physicalDefenseGain"
                         :rules="$genRules({rule:/^\d+$/,message:'物理防御增益输入有误'})">
             <el-input v-model.number="form.physicalDefenseGain" placeholder="请输入物理防御增益" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <div v-if="form.isGain === 1">
-          <el-form-item label="物理防御增益持续时间：" prop="physicalDefenseGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'物理防御增益持续时间输入有误'})">
-            <el-input v-model.number="form.physicalDefenseGainDuration" placeholder="请输入物理防御增益持续时间"
-                      class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -137,24 +114,10 @@
           </el-form-item>
         </div>
 
-        <div v-if="form.isGain === 1">
-          <el-form-item label="魔法攻击增益持续时间：" prop="magicAttackGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'魔法攻击增益持续时间输入有误'})">
-            <el-input v-model.number="form.magicAttackGainDuration" placeholder="请输入魔法攻击增益持续时间" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
         <!-- 魔法防御 -->
         <div v-if="form.isGain === 1">
           <el-form-item label="魔法防御增益：" prop="magicDefenseGain" :rules="$genRules({rule:/^\d+$/,message:'魔法防御增益输入有误'})">
             <el-input v-model.number="form.magicDefenseGain" placeholder="请输入魔法防御增益" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <div v-if="form.isGain === 1">
-          <el-form-item label="魔法防御增益持续时间：" prop="magicDefenseGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'魔法防御增益持续时间输入有误'})">
-            <el-input v-model.number="form.magicDefenseGainDuration" placeholder="请输入魔法防御增益持续时间" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -165,24 +128,10 @@
           </el-form-item>
         </div>
 
-        <div v-if="form.isGain === 1">
-          <el-form-item label="暴击率持续时间：" prop="critGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'暴击率持续时间输入有误'})">
-            <el-input v-model.number="form.critGainDuration" placeholder="请输入暴击率持续时间" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
         <!-- 命中率 -->
         <div v-if="form.isGain === 1">
           <el-form-item label="命中率增益：" prop="hitGain" :rules="$genRules({rule:/^\d+$/,message:'命中率输入有误'})">
             <el-input v-model.number="form.hitGain" placeholder="请输入命中率" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <div v-if="form.isGain === 1">
-          <el-form-item label="命中率持续时间：" prop="hitGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'命中率持续时间输入有误'})">
-            <el-input v-model.number="form.hitGainDuration" placeholder="请输入命中率持续时间" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -193,24 +142,10 @@
           </el-form-item>
         </div>
 
-        <div v-if="form.isGain === 1">
-          <el-form-item label="闪避率持续时间：" prop="dodgeGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'闪避率持续时间输入有误'})">
-            <el-input v-model.number="form.dodgeGainDuration" placeholder="请输入闪避率持续时间" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
         <!-- 暴抗率 -->
         <div v-if="form.isGain === 1">
           <el-form-item label="暴抗率增益：" prop="critResistanceGain" :rules="$genRules({rule:/^\d+$/,message:'暴抗率输入有误'})">
             <el-input v-model.number="form.critResistanceGain" placeholder="请输入暴抗率" class="bc-width-400"/>
-          </el-form-item>
-        </div>
-
-        <div v-if="form.isGain === 1">
-          <el-form-item label="暴抗率持续时间：" prop="critResistanceGainDuration"
-                        :rules="$genRules({rule:/^\d+$/,message:'暴抗率持续时间输入有误'})">
-            <el-input v-model.number="form.critResistanceGainDuration" placeholder="请输入暴抗率持续时间" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -236,37 +171,27 @@
 
       hp: 0,
       hpGain: 0,
-      hpGainDuration: 0,
 
       mp: 0,
       mpGain: 0,
-      mpGainDuration: 0,
 
       physicalAttack: 0,
       physicalAttackGain: 0,
-      physicalAttackGainDuration: 0,
 
       physicalDefenseGain: 0,
-      physicalDefenseGainDuration: 0,
 
       magicAttack: 0,
       magicAttackGain: 0,
-      magicAttackGainDuration: 0,
 
       magicDefenseGain: 0,
-      magicDefenseGainDuration: 0,
 
       critGain: 0,
-      critGainDuration: 0,
 
       hitGain: 0,
-      hitGainDuration: 0,
 
       dodgeGain: 0,
-      dodgeGainDuration: 0,
 
       critResistanceGain: 0,
-      critResistanceGainDuration: 0,
 
       //消耗
       consumeHp: 0,
@@ -275,7 +200,9 @@
       //等级
       level: 1,
       //是够增益类型
-      isGain: 0
+      isGain: 0,
+      //增益时效时间
+      duration: 0
     }
   }
 
@@ -305,16 +232,18 @@
         //清空增益内容
         if (val === 0) {
           const form = this.form;
-          form.hpGain = form.hpGainDuration = 0;
-          form.mpGain = form.mpGainDuration = 0;
-          form.physicalAttackGain = form.physicalAttackGainDuration = 0;
-          form.physicalDefenseGain = form.physicalDefenseGainDuration = 0;
-          form.magicAttackGain = form.magicAttackGainDuration = 0;
-          form.magicDefenseGain = form.magicDefenseGainDuration = 0;
-          form.critGain = form.critGainDuration = 0;
-          form.hitGain = form.hitGainDuration = 0;
-          form.dodgeGain = form.dodgeGainDuration = 0;
-          form.critGain = form.critGainDuration = 0;
+          form.hpGain = 0;
+          form.mpGain = 0;
+          form.physicalAttackGain = 0;
+          form.physicalDefenseGain = 0;
+          form.magicAttackGain = 0;
+          form.magicDefenseGain = 0;
+          form.critGain = 0;
+          form.hitGain = 0;
+          form.dodgeGain = 0;
+          form.critGain = 0;
+          //删除增益时效
+          form.duration = 0;
         }
       },
 
