@@ -73,7 +73,7 @@
             <el-form-item label=" ">
               <!-- 奖励类型 -->
               <SelectConfigType v-model.number="rewardData.type" name="REWARD_TYPE" class="bc-width-200"
-                                @change="rewardData.chance = 100"/>
+                                @change="changeRewardType"/>
               <!-- 资源列表 -->
               <SelectToApi api="/scene/resource/list" v-model.number="rewardData.resourceId"
                            v-show="rewardData.type === 1"/>
@@ -81,7 +81,8 @@
               <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
                         placeholder="资源概率掉落1-100"/>
               <!-- 奖励的数量或者是奖励的量值 -->
-              <el-input v-model.number="rewardData.amount" class="bc-width-200" placeholder="奖励的数量或者是奖励的量值"/>
+              <el-input v-if="rewardData.type !== 1" v-model.number="rewardData.amount" class="bc-width-200"
+                        placeholder="奖励的数量或者是奖励的量值"/>
 
               <el-button @click="addReward">
                 添加
@@ -180,7 +181,6 @@
       dodge: 0,
       //暴击抵抗率
       critResistance: 0
-
     }
   }
 
@@ -224,6 +224,10 @@
       };
     },
     methods: {
+      //修改奖励的类型
+      changeRewardType() {
+        this.rewardData.chance = 100;
+      },
       getInfo() {
         const query = this.$route.query;
         this.$axios.get(`/scene/monster/detail`, {

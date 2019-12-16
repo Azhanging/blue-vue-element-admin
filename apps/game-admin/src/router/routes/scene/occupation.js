@@ -10,14 +10,14 @@ const occupation = [{
   children: [{
     name: 'occupationList',
     path: 'list',
-    component: () => import('@/views/scene/occupation/list'),
+    component: () => import('@/views/scene/occupation/List'),
     meta: {
       title: '职业'
     }
   }, {
     name: 'occupationDetail',
     path: 'detail',
-    component: () => import('@/views/scene/occupation/detail'),
+    component: () => import('@/views/scene/occupation/Detail'),
     hidden: true,
     meta: {
       title: '添加职业'

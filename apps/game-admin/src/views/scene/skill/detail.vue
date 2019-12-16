@@ -47,7 +47,7 @@
         </div>
 
         <!-- 增益时效时间 -->
-        <div>
+        <div v-if="form.isGain === 1">
           <el-form-item label="增益时效时间：" prop="duration" :rules="$genRules({rule:/^\d+$/,message:'增益时效时间输入有误'})">
             <el-input v-model.number="form.duration" placeholder="请输入增益时效时间" class="bc-width-400"/>
           </el-form-item>

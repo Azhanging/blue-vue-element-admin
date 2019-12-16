@@ -10,14 +10,14 @@ const resource = [{
   children: [{
     name: 'taskList',
     path: 'list',
-    component: () => import('@/views/scene/task/list'),
+    component: () => import('@/views/scene/task/List'),
     meta: {
       title: '任务'
     }
   }, {
     name: 'taskDetail',
     path: 'detail',
-    component: () => import('@/views/scene/task/detail'),
+    component: () => import('@/views/scene/task/Detail'),
     hidden: true,
     meta: {
       title: '添加任务'

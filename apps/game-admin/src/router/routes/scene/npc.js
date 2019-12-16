@@ -10,14 +10,14 @@ const npc = [{
   children: [{
     name: 'npcList',
     path: 'list',
-    component: () => import('@/views/scene/npc/list'),
+    component: () => import('@/views/scene/npc/List'),
     meta: {
       title: 'NPC'
     }
   }, {
     name: 'npcDetail',
     path: 'detail',
-    component: () => import('@/views/scene/npc/detail'),
+    component: () => import('@/views/scene/npc/Detail'),
     hidden: true,
     meta: {
       title: 'NPC管理'

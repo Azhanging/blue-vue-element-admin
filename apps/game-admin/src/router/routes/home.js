@@ -7,7 +7,7 @@ const home = [{
   children: [{
     name: 'Home',
     path: 'home',
-    component: () => import('@/views/home/index'),
+    component: () => import('@/views/home/Index'),
     meta: {
       title: '首页',
       affix: true

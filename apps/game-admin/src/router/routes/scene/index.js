@@ -7,6 +7,7 @@ import monster from "./monster";
 import task from "./task";
 import occupation from "./occupation";
 import skill from "./skill";
+import level from "./level";
 
 //场景相关
 const scene = [{
@@ -22,7 +23,8 @@ const scene = [{
     ...task,
     ...map,
     ...occupation,
-    ...skill
+    ...skill,
+    ...level
   ]
 }];
 

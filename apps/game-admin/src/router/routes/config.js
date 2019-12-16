@@ -10,7 +10,7 @@ const config = [{
   children: [{
     name: 'configList',
     path: 'list',
-    component: () => import('@/views/config/list'),
+    component: () => import('@/views/config/Index'),
     meta: {
       title: '配置'
     }
@@ -18,7 +18,7 @@ const config = [{
     name: 'configDetail',
     path: 'detail',
     hidden: true,
-    component: () => import('@/views/config/detail'),
+    component: () => import('@/views/config/Detail'),
     meta: {
       title: '配置管理'
     }

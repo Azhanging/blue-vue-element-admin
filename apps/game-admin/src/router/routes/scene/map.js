@@ -10,14 +10,14 @@ const map = [{
   children: [{
     name: 'mapList',
     path: 'list',
-    component: () => import('@/views/scene/map/list'),
+    component: () => import('@/views/scene/map/List'),
     meta: {
       title: '地图'
     }
   }, {
     name: 'mapDetail',
     path: 'detail',
-    component: () => import('@/views/scene/map/detail'),
+    component: () => import('@/views/scene/map/Detail'),
     hidden: true,
     meta: {
       title: '地图管理'
