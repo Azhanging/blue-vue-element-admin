@@ -28,9 +28,11 @@
 
         <!-- 资源类型 -->
         <div>
-          <el-form-item label="装备类型：" prop="equipmentType" :rules="$genRules({rule:/^\d+$/,message:'请选择装备类型'})"
+          <el-form-item label="装备类型：" prop="equipmentType" :rules="$genRules({rule:/^[1-5]$/,message:'请选择装备类型'})"
                         v-if="form.type === 3">
-            <SelectConfigType v-model="form.equipmentType" name="EQUIPMENT_TYPE" class="bc-width-400"/>
+            <SelectConfigType v-model="form.equipmentType" name="EQUIPMENT_TYPE" class="bc-width-400">
+              <el-option :value="0" label="请选择" slot="options" />
+            </SelectConfigType>
           </el-form-item>
         </div>
 

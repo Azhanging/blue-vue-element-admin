@@ -1,5 +1,6 @@
 <template>
   <el-select filterable v-model="currentValue" @change="change" :disabled="disabled">
+    <slot name="options" />
     <el-option v-for="(item,index) in data" :value="item.value" :label="item.label" :key="index"/>
   </el-select>
 </template>

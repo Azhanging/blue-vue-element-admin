@@ -81,7 +81,7 @@
               <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
                         placeholder="资源概率掉落1-100"/>
               <!-- 奖励的数量或者是奖励的量值 -->
-              <el-input v-if="rewardData.type !== 1" v-model.number="rewardData.amount" class="bc-width-200"
+              <el-input v-model.number="rewardData.amount" class="bc-width-200"
                         placeholder="奖励的数量或者是奖励的量值"/>
 
               <el-button @click="addReward">

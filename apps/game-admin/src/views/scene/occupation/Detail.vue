@@ -4,6 +4,11 @@
     <BvaBody>
       <el-form :model="form" inline label-width="140px" ref="form">
 
+        <!-- 默认属性 -->
+        <div class="bc-pd-15 bc-f-b">
+          默认属性
+        </div>
+
         <!-- 职业名 -->
         <div>
           <el-form-item label="职业名：" prop="name" :rules="$genRules({rule:/.+/,message:'职业名输入有误'})">
@@ -97,6 +102,82 @@
           </el-form-item>
         </div>
 
+        <!-- 升级提升属性 -->
+        <div class="bc-pd-15 bc-f-b">
+          升级提升属性
+        </div>
+
+        <!-- hp -->
+        <div>
+          <el-form-item label="hp：" prop="improveHp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
+            <el-input v-model.number="form.improveHp" placeholder="请输入hp" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- mp -->
+        <div>
+          <el-form-item label="mp：" prop="improveMp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
+            <el-input v-model.number="form.improveMp" placeholder="请输入mp" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 物理攻击 -->
+        <div>
+          <el-form-item label="物理攻击：" prop="improvePhysicalAttack" :rules="$genRules({rule:/^\d+$/,message:'物理攻击值输入有误'})">
+            <el-input v-model.number="form.improvePhysicalAttack" placeholder="请输入物理攻击" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 物理防御 -->
+        <div>
+          <el-form-item label="物理防御：" prop="improvePhysicalDefense" :rules="$genRules({rule:/^\d+$/,message:'物理防御输入有误'})">
+            <el-input v-model.number="form.improvePhysicalDefense" placeholder="请输入物理防御" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 魔法攻击 -->
+        <div>
+          <el-form-item label="魔法攻击：" prop="improveMagicAttack" :rules="$genRules({rule:/^\d+$/,message:'魔法攻击输入有误'})">
+            <el-input v-model.number="form.improveMagicAttack" placeholder="请输入魔法攻击" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 魔法防御 -->
+        <div>
+          <el-form-item label="魔法防御：" prop="improveMagicDefense" :rules="$genRules({rule:/^\d+$/,message:'魔法防御输入有误'})">
+            <el-input v-model.number="form.improveMagicDefense" placeholder="请输入魔法防御" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 暴击率 -->
+        <div>
+          <el-form-item label="暴击率：" prop="improveCrit" :rules="$genRules({rule:/^\d+$/,message:'暴击率输入有误'})">
+            <el-input v-model.number="form.improveCrit" placeholder="请输入暴击率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 命中率 -->
+        <div>
+          <el-form-item label="命中率：" prop="improveHit" :rules="$genRules({rule:/^\d+$/,message:'命中率输入有误'})">
+            <el-input v-model.number="form.improveHit" placeholder="请输入命中率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 闪避率 -->
+        <div>
+          <el-form-item label="闪避率：" prop="improveDodge" :rules="$genRules({rule:/^\d+$/,message:'闪避率输入有误'})">
+            <el-input v-model.number="form.improveDodge" placeholder="请输入闪避率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <!-- 暴抗率 -->
+        <div>
+          <el-form-item label="暴抗率：" prop="improveCritResistance" :rules="$genRules({rule:/^\d+$/,message:'暴击抵抗率输入有误'})">
+            <el-input v-model.number="form.improveCritResistance" placeholder="请输入暴抗率" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+
         <BvaFooter>
           <el-button @click="submit" type="primary">
             提交
@@ -116,10 +197,11 @@
       name: '',
       //职业简介
       description: '',
-      hp: 1,
-      mp: 1,
       //技能
       skill: [],
+
+      hp: 1,
+      mp: 1,
       physicalAttack: 1,
       physicalDefense: 1,
       magicAttack: 1,
@@ -131,7 +213,23 @@
       //闪避率
       dodge: 0,
       //暴击抵抗率
-      critResistance: 0
+      critResistance: 0,
+
+      //升级提升属性
+      improveHp: 0,
+      improveMp: 0,
+      improvePhysicalAttack: 0,
+      improvePhysicalDefense: 0,
+      improveMagicAttack: 0,
+      improveMagicDefense: 0,
+      //暴击率
+      improveCrit: 0,
+      //命中率
+      improveHit: 0,
+      //闪避率
+      improveDodge: 0,
+      //暴击抵抗率
+      improveCritResistance: 0
     }
   }
 
