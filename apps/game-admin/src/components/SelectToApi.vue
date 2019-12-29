@@ -1,5 +1,5 @@
 <template>
-  <el-select filterable v-model="currentValue" filterable @change="change" :multiple="multiple">
+  <el-select filterable v-model="currentValue" filterable @change="change" :multiple="multiple" :disabled="disabled">
     <el-option v-for="(item,index) in data" :value="item[valueKey]" :label="getLabelKey(item)" :key="index"/>
   </el-select>
 </template>
@@ -29,6 +29,16 @@
         type: [String, Function]
       },
       multiple: {
+        default: false,
+        type: Boolean
+      },
+      got: {
+        default(data) {
+          return data.list;
+        },
+        type: Function
+      },
+      disabled: {
         default: false,
         type: Boolean
       }
@@ -70,7 +80,7 @@
           method
         }).then((res) => {
           const { data } = res;
-          this.data = data.list;
+          this.data = this.got(data);
           this.$emit('loaded', this.data);
         });
       },

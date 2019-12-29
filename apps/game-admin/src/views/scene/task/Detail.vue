@@ -30,7 +30,13 @@
         <div>
           <el-form-item label="任务依赖：">
             <!-- 奖励类型 -->
-            <SelectToApi v-model="form.dependent" :multiple="true" api="/scene/task/list" labelKey="name" class="bc-width-400"/>
+            <SelectToApi v-model="form.dependent" :multiple="true" api="/scene/task/list" labelKey="name" :got="(data)=>{
+              //过滤掉当前的任务，避免回环依赖任务
+              return data.list.map((item)=>{
+                const {id} = this.$route.query;
+                if(item.id !== parseInt(id)) return item;
+              }).filter((item)=>item);
+            }" class="bc-width-400"/>
           </el-form-item>
         </div>
 
@@ -47,7 +53,7 @@
               <el-table border stripe tooltip-effect="light" :data="form.dialogue" class="bc-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
-                    <SelectConfigType v-model="scope.row.type" name="DIALOGUE_TYPE" disabled/>
+                    <SelectConfigType v-model="scope.row.type" name="DIALOGUE_TYPE"/>
                   </template>
                 </el-table-column>
                 <el-table-column align="center" label="内容">
@@ -89,17 +95,10 @@
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"
+                                 :disabled="true"/>
                     <template v-else>
                       {{'-'}}
-                    </template>
-                  </template>
-                </el-table-column>
-                <el-table-column align="center" label="奖励概率">
-                  <template slot-scope="scope">
-                    <el-input v-model="scope.row.chance" placeholder="请输入奖励概率" v-if="scope.row.type === 1"/>
-                    <template v-else>
-                      {{scope.row.chance}}
                     </template>
                   </template>
                 </el-table-column>
@@ -121,13 +120,9 @@
           <div>
             <el-form-item label=" ">
               <!-- 奖励类型 -->
-              <SelectConfigType v-model="rewardData.type" name="REWARD_TYPE" class="bc-width-200"
-                                @change="rewardData.chance = 100"/>
+              <SelectConfigType v-model="rewardData.type" name="REWARD_TYPE" class="bc-width-200"/>
               <!-- 资源列表 -->
               <SelectToApi api="/scene/resource/list" v-model="rewardData.resourceId" v-show="rewardData.type === 1"/>
-              <!-- 概率掉落 -->
-              <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
-                        placeholder="资源概率掉落1-100"/>
               <!-- 奖励的数量或者是奖励的量值 -->
               <el-input v-model="rewardData.amount" class="bc-width-200" placeholder="奖励的数量或者是奖励的量值"/>
 
@@ -145,17 +140,21 @@
               <el-table border stripe tooltip-effect="light" :data="form.requirement" class="bc-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
-                    <SelectConfigType v-model="scope.row.type" name="TASK_REQUIREMENT_TYPE" disabled/>
+                    <SelectConfigType v-model="scope.row.type" name="TASK_REQUIREMENT_TYPE" :disabled="true"/>
                   </template>
                 </el-table-column>
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.bindId" v-if="scope.row.type === 1"
+                                 :disabled="true"/>
+                    <!--怪物列表-->
+                    <SelectToApi api="/scene/monster/list" v-model="scope.row.bindId" v-else-if="scope.row.type === 2"
+                                 :disabled="true"/>
+                    <!-- 其他 -->
                     <template v-else>
                       {{'-'}}
                     </template>
-
                   </template>
                 </el-table-column>
                 <el-table-column align="center" label="量值">
@@ -177,14 +176,14 @@
             <el-form-item label=" ">
               <!-- 奖励类型 -->
               <SelectConfigType v-model="requirementData.type" name="TASK_REQUIREMENT_TYPE"
-                                @change="requirementData.resourceId = '',requirementData.monsterId = ''"
+                                @change="requirementData.bindId = ''"
                                 class="bc-width-200"/>
               <!-- 资源列表 -->
-              <SelectToApi api="/scene/resource/list" v-model="requirementData.resourceId"
+              <SelectToApi api="/scene/resource/list" v-model="requirementData.bindId"
                            v-show="requirementData.type === 1"/>
 
               <!-- 怪物列表 -->
-              <SelectToApi api="/scene/monster/list" v-model="requirementData.monsterId"
+              <SelectToApi api="/scene/monster/list" v-model="requirementData.bindId"
                            v-show="requirementData.type === 2"/>
 
               <!-- 奖励的数量或者是奖励的量值 -->
@@ -238,9 +237,7 @@
       //奖励的数量
       amount: 1,
       //资源id
-      resourceId: '',
-      //概率
-      chance: 100
+      resourceId: ''
     };
   }
 
@@ -250,10 +247,8 @@
       type: 1,
       //奖励的数量
       amount: 1,
-      //资源id
-      resourceId: '',
-      //怪物id
-      monsterId: ''
+      //绑定id
+      bindId: ''
     };
   }
 
@@ -325,11 +320,10 @@
         listData = this.form[type];
         formData = this[`${type}Data`];
         if (formData.type === 1 && !formData.resourceId) {
-          this.$message({
+          return this.$message({
             message: `请选择资源`,
             type: 'error'
           });
-          return;
         }
         listData.push(formData);
         this.clearData(type);

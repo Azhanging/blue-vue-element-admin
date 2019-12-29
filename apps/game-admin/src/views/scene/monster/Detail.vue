@@ -40,7 +40,7 @@
                 <el-table-column align="center" label="资源" prop="resourceName">
                   <template slot-scope="scope">
                     <!-- 资源列表 -->
-                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1"/>
+                    <SelectToApi api="/scene/resource/list" v-model="scope.row.resourceId" v-if="scope.row.type === 1" :disabled="true"/>
                     <template v-else>
                       -
                     </template>

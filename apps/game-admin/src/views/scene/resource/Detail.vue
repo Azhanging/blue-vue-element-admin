@@ -193,9 +193,9 @@
       //资源类型
       type: '',
       //装备类型
-      equipmentType: '',
+      equipmentType: 0,
       //职业使用类型
-      occupationId: ``,
+      occupationId: 0,
       //是否可交易
       trade: 1,
       //售价，针对npc商店的售价
@@ -254,7 +254,7 @@
       changeType(val) {
         const form = this.form;
         form.durationType = 0;
-        val !== 3 && (form.occupation = '');
+        val !== 3 && (form.occupationId = 0) && (form.equipmentType = 0);
         val === 3 && (form.groupAmount = 1);
       },
 
