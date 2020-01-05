@@ -70,7 +70,7 @@ $axios.interceptors.response.use((res) => {
 }, (error) => {
   const axiosConfig = error.config;
   const isTimeout = /timeout/ig.test(error.message);
-  const status = isTimeout ? 'timeout' : error.response.status;
+  const status = isTimeout ? 'timeout' : (error.response ? error.response.status : 400);
   const errorConfig = config.error;
   hideLoading();
 

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d5d1644-6b89-4c6c-8fb7-4ecec7f6b26f" name="Default" comment="" />
+    <list default="true" id="7d5d1644-6b89-4c6c-8fb7-4ecec7f6b26f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/apps/game-admin/src/views/scene/task/Detail.vue" afterPath="$PROJECT_DIR$/apps/game-admin/src/views/scene/task/Detail.vue" />
+      <change beforePath="$PROJECT_DIR$/use-in-vue/axios.js" afterPath="$PROJECT_DIR$/use-in-vue/axios.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +24,7 @@
       <file leaf-file-name="List.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/map/List.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="252">
               <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
@@ -30,8 +34,8 @@
       <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/monster/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="36" column="60" lean-forward="true" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+            <state relative-caret-position="756">
+              <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -40,7 +44,7 @@
       <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/occupation/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6467">
+            <state relative-caret-position="4683">
               <caret line="223" column="28" lean-forward="false" selection-start-line="223" selection-start-column="28" selection-end-line="223" selection-end-column="28" />
               <folding />
             </state>
@@ -50,7 +54,7 @@
       <file leaf-file-name="List.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/skill/List.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
+            <state relative-caret-position="630">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -60,7 +64,7 @@
       <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/npc/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2378">
+            <state relative-caret-position="1722">
               <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="35" />
               <folding />
             </state>
@@ -70,8 +74,8 @@
       <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/resource/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2581">
-              <caret line="262" column="51" lean-forward="true" selection-start-line="262" selection-start-column="51" selection-end-line="262" selection-end-column="51" />
+            <state relative-caret-position="486">
+              <caret line="262" column="51" lean-forward="false" selection-start-line="262" selection-start-column="51" selection-end-line="262" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -80,8 +84,18 @@
       <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/task/Detail.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1634">
-              <caret line="122" column="97" lean-forward="false" selection-start-line="122" selection-start-column="97" selection-end-line="122" selection-end-column="97" />
+            <state relative-caret-position="293">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="axios.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/use-in-vue/axios.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -90,7 +104,7 @@
       <file leaf-file-name="SelectToApi.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state relative-caret-position="21">
               <caret line="1" column="116" lean-forward="false" selection-start-line="1" selection-start-column="116" selection-end-line="1" selection-end-column="116" />
               <folding />
             </state>
@@ -100,7 +114,7 @@
       <file leaf-file-name="SelectConfigType.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectConfigType.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1247">
+            <state relative-caret-position="903">
               <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
               <folding />
             </state>
@@ -224,7 +238,6 @@
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/occupation/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/monster/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/map/detail.vue" />
-        <option value="$PROJECT_DIR$/use-in-vue/axios.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/resource/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/skill/detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/config/exp.vue" />
@@ -251,6 +264,7 @@
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/resource/Detail.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/monster/Detail.vue" />
+        <option value="$PROJECT_DIR$/use-in-vue/axios.js" />
         <option value="$PROJECT_DIR$/apps/game-admin/src/views/scene/task/Detail.vue" />
       </list>
     </option>
@@ -271,11 +285,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-6" />
-    <option name="y" value="38" />
-    <option name="width" value="1932" />
-    <option name="height" value="1045" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1366" />
+    <option name="height" value="706" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -296,7 +309,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,30 +351,11 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="scene" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
-              <item name="monster" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blue-vue-element-admin-program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blue-vue-element-admin-program" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="game-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -547,11 +540,13 @@
       <workItem from="1577449058798" duration="1813000" />
       <workItem from="1577494061465" duration="7275000" />
       <workItem from="1577580553462" duration="10422000" />
+      <workItem from="1578059403576" duration="874000" />
+      <workItem from="1578100484340" duration="8054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490583000" />
+    <option name="totallyTimeSpent" value="499511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,16 +558,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="0" y="23" width="1366" height="706" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24815595" sideWeight="0.50614524" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23122677" sideWeight="0.49565217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23535253" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24815595" sideWeight="0.49385476" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20442571" sideWeight="0.49385476" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24802528" sideWeight="0.5024826" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23122677" sideWeight="0.5043478" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8370119" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26976496" sideWeight="0.41855204" order="4" side_tool="true" content_ui="tabs" />
@@ -583,6 +577,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23535253" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -767,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/use-in-vue/axios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="108" column="5" lean-forward="true" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue-config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -920,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/map/List.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
+        <state relative-caret-position="252">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
@@ -928,7 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/occupation/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6467">
+        <state relative-caret-position="4683">
           <caret line="223" column="28" lean-forward="false" selection-start-line="223" selection-start-column="28" selection-end-line="223" selection-end-column="28" />
           <folding />
         </state>
@@ -936,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/skill/List.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="630">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -944,7 +932,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/npc/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2378">
+        <state relative-caret-position="1722">
           <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="35" />
           <folding />
         </state>
@@ -952,23 +940,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectConfigType.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1247">
+        <state relative-caret-position="903">
           <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/resource/Detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2581">
-          <caret line="262" column="51" lean-forward="true" selection-start-line="262" selection-start-column="51" selection-end-line="262" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/components/SelectToApi.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="21">
           <caret line="1" column="116" lean-forward="false" selection-start-line="1" selection-start-column="116" selection-end-line="1" selection-end-column="116" />
           <folding />
         </state>
@@ -976,16 +956,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/monster/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="36" column="60" lean-forward="true" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        <state relative-caret-position="756">
+          <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/use-in-vue/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/resource/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="262" column="51" lean-forward="false" selection-start-line="262" selection-start-column="51" selection-end-line="262" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/game-admin/src/views/scene/task/Detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1634">
-          <caret line="122" column="97" lean-forward="false" selection-start-line="122" selection-start-column="97" selection-end-line="122" selection-end-column="97" />
+        <state relative-caret-position="293">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>

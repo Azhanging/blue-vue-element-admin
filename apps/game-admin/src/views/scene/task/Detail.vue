@@ -28,6 +28,19 @@
         </div>
 
         <div>
+          <el-form-item label="下一任务：">
+            <!-- 奖励类型 -->
+            <SelectToApi v-model="form.nextTaskId" api="/scene/task/list" labelKey="name" :got="(data)=>{
+              //过滤掉当前的任务，避免回环依赖任务
+              return data.list.map((item)=>{
+                const {id} = this.$route.query;
+                if(item.id !== parseInt(id)) return item;
+              }).filter((item)=>item);
+            }" class="bc-width-400"/>
+          </el-form-item>
+        </div>
+
+        <div>
           <el-form-item label="任务依赖：">
             <!-- 奖励类型 -->
             <SelectToApi v-model="form.dependent" :multiple="true" api="/scene/task/list" labelKey="name" :got="(data)=>{
@@ -222,6 +235,8 @@
       level: 1,
       //奖励
       reward: [],
+      //下一个任务
+      nextTaskId: '',
       //依赖任务
       dependent: [],
       //任务完成需求
@@ -296,7 +311,7 @@
             id: query.id
           }
         }).then((res) => {
-          const { data } = res;
+          const {data} = res;
           this.form = data;
         });
       },
