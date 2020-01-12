@@ -194,7 +194,7 @@
     methods: {
       fetchData(id) {
         this.$axios({
-          url: `/mock/article/detail`,
+          url: `/mock/article/info`,
           data: {
             id
           }
