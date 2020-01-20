@@ -6,7 +6,7 @@ import store from './store';
 import router from './router';
 import { getUserInfo } from "$assets/js/user";
 import '@assets/css/app.scss';
-import '@assets/css/blue-component.scss';
+import '@assets/css/blue-zone.scss';
 
 useInVue({
   Vue
