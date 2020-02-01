@@ -6,34 +6,34 @@
       <el-form inline ref="form" label-width="200px" :model="form">
         <div>
           <el-form-item label="地图名：" prop="name" :rules="$genRules({rule:/.+/,message:'地图名输入有误'})">
-            <el-input v-model="form.name" placeholder="输入地图名" class="bc-width-400"/>
+            <el-input v-model="form.name" placeholder="输入地图名" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="地图简介：" prop="description" :rules="$genRules({rule:/.+/,message:'地图名输入有误'})">
-            <el-input type="textarea" v-model="form.description" placeholder="输入地图简介" class="bc-width-400"/>
+            <el-input type="textarea" v-model="form.description" placeholder="输入地图简介" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="其他地图：">
             <SelectToApi v-model="form.map" :multiple="true" api="/scene/map/list" valueKey="id" labelKey="name"
-                         class="bc-width-400"/>
+                         class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="添加NPC：">
             <SelectToApi v-model="form.npc" :multiple="true" api="/scene/npc/list" valueKey="id" labelKey="name"
-                         class="bc-width-400"/>
+                         class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="添加怪物：">
             <SelectToApi v-model="form.monster" :multiple="true" api="/scene/monster/list" valueKey="id" labelKey="name"
-                         class="bc-width-400"/>
+                         class="bz-width-400"/>
           </el-form-item>
         </div>
 

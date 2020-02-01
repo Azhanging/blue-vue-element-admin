@@ -7,13 +7,13 @@
 
         <div>
           <el-form-item label="楼名：" prop="buildingId" :rules="$genRules({rule:/.+/,message:'请选择楼名'})">
-            <SelectToApi api="/building/list" v-model="form.buildingId" class="bc-width-400"/>
+            <SelectToApi api="/building/list" v-model="form.buildingId" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="房间名：" prop="name" :rules="$genRules({rule:/.+/,message:'房间名输入有误'})">
-            <el-input v-model="form.name" placeholder="输入房间名" class="bc-width-400"/>
+            <el-input v-model="form.name" placeholder="输入房间名" class="bz-width-400"/>
           </el-form-item>
         </div>
 

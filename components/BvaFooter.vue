@@ -1,5 +1,5 @@
 <template>
-  <div class="bva-footer bc-bg-white">
+  <div class="bva-footer bz-bg-white">
     <slot/>
   </div>
 </template>

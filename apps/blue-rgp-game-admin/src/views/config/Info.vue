@@ -7,19 +7,19 @@
         <el-form inline ref="form" label-width="200px" :model="form">
           <div>
             <el-form-item label="配置NAME：" prop="name" :rules="$genRules({rule:/.+/,message:'配置NAME输入有误'})">
-              <el-input v-model="form.name" placeholder="配置NAME" class="bc-width-400"/>
+              <el-input v-model="form.name" placeholder="配置NAME" class="bz-width-400"/>
             </el-form-item>
           </div>
 
           <div>
             <el-form-item label="配置VALUE：" prop="value" :rules="$genRules({rule:/.+/,message:'配置VALUE输入有误'})">
-              <el-input type="textarea" v-model="form.value" placeholder="配置VALUE" class="bc-width-400"/>
+              <el-input type="textarea" v-model="form.value" placeholder="配置VALUE" class="bz-width-400"/>
             </el-form-item>
           </div>
 
           <div>
             <el-form-item label="配置注释：" prop="comments" :rules="$genRules({rule:/.+/,message:'配置注释输入有误'})">
-              <el-input v-model="form.comments" placeholder="配置value" class="bc-width-400"/>
+              <el-input v-model="form.comments" placeholder="配置value" class="bz-width-400"/>
             </el-form-item>
           </div>
 

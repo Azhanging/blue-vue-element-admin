@@ -6,32 +6,32 @@
 
         <div>
           <el-form-item label="怪物名：" prop="name" :rules="$genRules({rule:/.+/,message:'怪物名输入有误'})">
-            <el-input v-model="form.name" placeholder="请输入怪物名" class="bc-width-400"/>
+            <el-input v-model="form.name" placeholder="请输入怪物名" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="怪物简介：" prop="description" :rules="$genRules({rule:/.+/,message:'怪物名输入有误'})">
-            <el-input v-model="form.description" placeholder="请输入怪物名简介" class="bc-width-400"/>
+            <el-input v-model="form.description" placeholder="请输入怪物名简介" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="hp：" prop="hp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
-            <el-input v-model.number="form.hp" placeholder="请输入hp" class="bc-width-400"/>
+            <el-input v-model.number="form.hp" placeholder="请输入hp" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="mp：" prop="mp" :rules="$genRules({rule:/^\d+$/,message:'hp输入有误'})">
-            <el-input v-model.number="form.mp" placeholder="请输入mp" class="bc-width-400"/>
+            <el-input v-model.number="form.mp" placeholder="请输入mp" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <div>
             <el-form-item label="奖励：" prop="reward" :rules="$genRules({type:'array',message:'请添加奖励'})">
-              <el-table border stripe tooltip-effect="light" :data="form.reward" class="bc-width-800">
+              <el-table border stripe tooltip-effect="light" :data="form.reward" class="bz-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
                     <SelectConfigType v-model="scope.row.type" name="REWARD_TYPE" disabled/>
@@ -72,16 +72,16 @@
           <div>
             <el-form-item label=" ">
               <!-- 奖励类型 -->
-              <SelectConfigType v-model.number="rewardData.type" name="REWARD_TYPE" class="bc-width-200"
+              <SelectConfigType v-model.number="rewardData.type" name="REWARD_TYPE" class="bz-width-200"
                                 @change="changeRewardType"/>
               <!-- 资源列表 -->
               <SelectToApi api="/scene/resource/list" v-model.number="rewardData.resourceId"
                            v-show="rewardData.type === 1"/>
               <!-- 概率掉落 -->
-              <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bc-width-200"
+              <el-input v-show="rewardData.type === 1" v-model.number="rewardData.chance" class="bz-width-200"
                         placeholder="资源概率掉落1-100"/>
               <!-- 奖励的数量或者是奖励的量值 -->
-              <el-input v-model.number="rewardData.amount" class="bc-width-200"
+              <el-input v-model.number="rewardData.amount" class="bz-width-200"
                         placeholder="奖励的数量或者是奖励的量值"/>
 
               <el-button @click="addReward">
@@ -94,53 +94,53 @@
 
         <div>
           <el-form-item label="物理攻击：" prop="physicalAttack" :rules="$genRules({rule:/^\d+$/,message:'输入物理攻击值输入有误'})">
-            <el-input v-model.number="form.physicalAttack" placeholder="请输入物理攻击值" class="bc-width-400"/>
+            <el-input v-model.number="form.physicalAttack" placeholder="请输入物理攻击值" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="物理防御：" prop="physicalDefense" :rules="$genRules({rule:/^\d+$/,message:'物理防御值输入有误'})">
-            <el-input v-model.number="form.physicalDefense" placeholder="请输入hp" class="bc-width-400"/>
+            <el-input v-model.number="form.physicalDefense" placeholder="请输入hp" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="魔法攻击：" prop="magicAttack" :rules="$genRules({rule:/^\d+$/,message:'魔法攻击值输入有误'})">
-            <el-input v-model.number="form.magicAttack" placeholder="请输入hp" class="bc-width-400"/>
+            <el-input v-model.number="form.magicAttack" placeholder="请输入hp" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="魔法防御：" prop="magicDefense" :rules="$genRules({rule:/^\d+$/,message:'魔法防御值输入有误'})">
-            <el-input v-model.number="form.magicDefense" placeholder="请输入hp" class="bc-width-400"/>
+            <el-input v-model.number="form.magicDefense" placeholder="请输入hp" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <!-- 暴击率 -->
         <div>
           <el-form-item label="暴击率：" prop="crit" :rules="$genRules({rule:/^\d+$/,message:'暴击率输入有误'})">
-            <el-input v-model.number="form.crit" placeholder="请输入暴击率" class="bc-width-400"/>
+            <el-input v-model.number="form.crit" placeholder="请输入暴击率" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <!-- 命中率 -->
         <div>
           <el-form-item label="命中率：" prop="hit" :rules="$genRules({rule:/^\d+$/,message:'命中率输入有误'})">
-            <el-input v-model.number="form.hit" placeholder="请输入命中率" class="bc-width-400"/>
+            <el-input v-model.number="form.hit" placeholder="请输入命中率" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <!-- 闪避率 -->
         <div>
           <el-form-item label="闪避率：" prop="dodge" :rules="$genRules({rule:/^\d+$/,message:'闪避率输入有误'})">
-            <el-input v-model.number="form.dodge" placeholder="请输入闪避率" class="bc-width-400"/>
+            <el-input v-model.number="form.dodge" placeholder="请输入闪避率" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <!-- 暴抗率 -->
         <div>
           <el-form-item label="暴抗率：" prop="critResistance" :rules="$genRules({rule:/^\d+$/,message:'暴击抵抗率输入有误'})">
-            <el-input v-model.number="form.critResistance" placeholder="请输入暴抗率" class="bc-width-400"/>
+            <el-input v-model.number="form.critResistance" placeholder="请输入暴抗率" class="bz-width-400"/>
           </el-form-item>
         </div>
 

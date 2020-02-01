@@ -7,14 +7,14 @@
         <!--任务名-->
         <div>
           <el-form-item label="任务名：" prop="name" :rules="$genRules({rule:/.+/,message:'任务名输入有误'})">
-            <el-input v-model="form.name" placeholder="请输入任务名" class="bc-width-400"/>
+            <el-input v-model="form.name" placeholder="请输入任务名" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <!--任务简介-->
         <div>
           <el-form-item label="任务简介：" prop="description" :rules="$genRules({rule:/.+/,message:'任务简介输入有误'})">
-            <el-input v-model="form.description" placeholder="请输入任务简介" class="bc-width-400"/>
+            <el-input v-model="form.description" placeholder="请输入任务简介" class="bz-width-400"/>
           </el-form-item>
         </div>
 
@@ -23,7 +23,7 @@
         <div>
           <el-form-item label="任务类型：" prop="type" :rules="$genRules({rule:/^\d$/,message:'请选择任务类型'})">
             <!-- 奖励类型 -->
-            <SelectConfigType v-model="form.type" name="TASK_TYPE" class="bc-width-400"/>
+            <SelectConfigType v-model="form.type" name="TASK_TYPE" class="bz-width-400"/>
           </el-form-item>
         </div>
 
@@ -36,7 +36,7 @@
                 const {id} = this.$route.query;
                 if(item.id !== parseInt(id)) return item;
               }).filter((item)=>item);
-            }" class="bc-width-400"/>
+            }" class="bz-width-400"/>
           </el-form-item>
         </div>
 
@@ -49,13 +49,13 @@
                 const {id} = this.$route.query;
                 if(item.id !== parseInt(id)) return item;
               }).filter((item)=>item);
-            }" class="bc-width-400"/>
+            }" class="bz-width-400"/>
           </el-form-item>
         </div>
 
         <div>
           <el-form-item label="任务等级：" prop="level" :rules="$genRules({rule:/^\d+$/,message:`输入任务等级有误`})">
-            <el-input v-model="form.level" placehodler="请输入任务等级" class="bc-width-400"/>
+            <el-input v-model="form.level" placehodler="请输入任务等级" class="bz-width-400"/>
           </el-form-item>
         </div>
 
@@ -63,7 +63,7 @@
         <div>
           <div>
             <el-form-item label="任务对话：" prop="dialogue" :rules="$genRules({rule:/.+/,message:'任务对话有误'})">
-              <el-table border stripe tooltip-effect="light" :data="form.dialogue" class="bc-width-800">
+              <el-table border stripe tooltip-effect="light" :data="form.dialogue" class="bz-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
                     <SelectConfigType v-model="scope.row.type" name="DIALOGUE_TYPE"/>
@@ -86,8 +86,8 @@
           </div>
           <div>
             <el-form-item label=" ">
-              <SelectConfigType v-model="dialogueData.type" name="DIALOGUE_TYPE" class="bc-width-200"/>
-              <el-input v-model="dialogueData.content" class="bc-width-200" placeholder="对话内容"/>
+              <SelectConfigType v-model="dialogueData.type" name="DIALOGUE_TYPE" class="bz-width-200"/>
+              <el-input v-model="dialogueData.content" class="bz-width-200" placeholder="对话内容"/>
               <el-button @click="addDialogue">
                 添加
               </el-button>
@@ -99,7 +99,7 @@
         <div>
           <div>
             <el-form-item label="任务奖励：" prop="reward" :rules="$genRules({type:'array',message:'请添加奖励'})">
-              <el-table border stripe tooltip-effect="light" :data="form.reward" class="bc-width-800">
+              <el-table border stripe tooltip-effect="light" :data="form.reward" class="bz-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
                     <SelectConfigType v-model="scope.row.type" name="REWARD_TYPE" disabled/>
@@ -133,11 +133,11 @@
           <div>
             <el-form-item label=" ">
               <!-- 奖励类型 -->
-              <SelectConfigType v-model="rewardData.type" name="REWARD_TYPE" class="bc-width-200"/>
+              <SelectConfigType v-model="rewardData.type" name="REWARD_TYPE" class="bz-width-200"/>
               <!-- 资源列表 -->
               <SelectToApi api="/scene/resource/list" v-model="rewardData.resourceId" v-show="rewardData.type === 1"/>
               <!-- 奖励的数量或者是奖励的量值 -->
-              <el-input v-model="rewardData.amount" class="bc-width-200" placeholder="奖励的数量或者是奖励的量值"/>
+              <el-input v-model="rewardData.amount" class="bz-width-200" placeholder="奖励的数量或者是奖励的量值"/>
 
               <el-button @click="addRules('reward')">
                 添加
@@ -150,7 +150,7 @@
         <div>
           <div>
             <el-form-item label="任务需求：">
-              <el-table border stripe tooltip-effect="light" :data="form.requirement" class="bc-width-800">
+              <el-table border stripe tooltip-effect="light" :data="form.requirement" class="bz-width-800">
                 <el-table-column align="center" label="类型">
                   <template slot-scope="scope">
                     <SelectConfigType v-model="scope.row.type" name="TASK_REQUIREMENT_TYPE" :disabled="true"/>
@@ -190,7 +190,7 @@
               <!-- 奖励类型 -->
               <SelectConfigType v-model="requirementData.type" name="TASK_REQUIREMENT_TYPE"
                                 @change="requirementData.bindId = ''"
-                                class="bc-width-200"/>
+                                class="bz-width-200"/>
               <!-- 资源列表 -->
               <SelectToApi api="/scene/resource/list" v-model="requirementData.bindId"
                            v-show="requirementData.type === 1"/>
@@ -200,7 +200,7 @@
                            v-show="requirementData.type === 2"/>
 
               <!-- 奖励的数量或者是奖励的量值 -->
-              <el-input v-model="requirementData.amount" class="bc-width-200" placeholder="数量或量值"/>
+              <el-input v-model="requirementData.amount" class="bz-width-200" placeholder="数量或量值"/>
 
               <el-button @click="addRules('requirement')">
                 添加

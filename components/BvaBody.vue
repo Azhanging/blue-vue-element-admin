@@ -1,5 +1,5 @@
 <template>
-  <div class="bc-pd-tb-15 bc-mg-b-50">
+  <div class="bz-pd-tb-15 bz-mg-b-50">
     <slot />
   </div>
 </template>

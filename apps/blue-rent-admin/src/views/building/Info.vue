@@ -6,7 +6,7 @@
       <el-form inline ref="form" label-width="200px" :model="form">
         <div>
           <el-form-item label="楼名：" prop="name" :rules="$genRules({rule:/.+/,message:'楼名输入有误'})">
-            <el-input v-model="form.name" placeholder="输入楼名" class="bc-width-400"/>
+            <el-input v-model="form.name" placeholder="输入楼名" class="bz-width-400"/>
           </el-form-item>
         </div>
 

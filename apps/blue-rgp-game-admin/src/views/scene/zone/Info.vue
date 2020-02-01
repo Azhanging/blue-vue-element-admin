@@ -6,13 +6,13 @@
         <el-form inline ref="form" label-width="200px" :model="form">
           <div>
             <el-form-item label="区域名：" prop="name" :rules="$genRules({rule:/.+/,message:'区域名输入有误'})">
-              <el-input v-model="form.name" placeholder="输入区域名" class="bc-width-400"/>
+              <el-input v-model="form.name" placeholder="输入区域名" class="bz-width-400"/>
             </el-form-item>
           </div>
 
           <div>
             <el-form-item label="区域简介：" prop="description" :rules="$genRules({rule:/.+/,message:'区域名输入有误'})">
-              <el-input type="textarea" v-model="form.description" placeholder="输入区域简介" class="bc-width-400"/>
+              <el-input type="textarea" v-model="form.description" placeholder="输入区域简介" class="bz-width-400"/>
             </el-form-item>
           </div>
 
